@@ -165,9 +165,8 @@ public class BluetoothConnectionService {
                 try {
                     // Read from the InputStream
                     //Read is synchronous call which keeps on waiting until data is available
-                    int bytes = inputStream.read(buffer, 0, 1);
+                    int bytes = inputStream.read(buffer, counter++, 1);
                     if (bytes > 0) {
-                        counter++;
                         if((char)buffer[counter-1] == '\n' || counter > 1022){
                             dataString = "";
                             counter = 0;
