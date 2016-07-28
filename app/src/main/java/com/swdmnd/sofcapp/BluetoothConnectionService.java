@@ -169,18 +169,18 @@ public class BluetoothConnectionService {
                     if (bytes > 0) {
                         if((char)buffer[counter-1] == '\n' || counter > 1022){
                             dataString = "";
-                            counter = 0;
                             dataString = new String(buffer, 0, counter-1);
                             mHandler.obtainMessage(Constants.MESSAGE_READ, dataString).sendToTarget();
                             buffer = new byte[1024];
+                            counter = 0;
                         }
                     } else if (bytes == -1){
                         if(counter > 0){
                             dataString = "";
-                            counter = 0;
                             dataString = new String(buffer, 0, counter);
                             mHandler.obtainMessage(Constants.MESSAGE_READ, dataString).sendToTarget();
                             buffer = new byte[1024];
+                            counter = 0;
                         }
                     }
                 } catch (IOException e) {
