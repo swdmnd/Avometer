@@ -1,0 +1,118 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.swdmnd.sofcapp.GetDataFragment"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:id="@+id/root_view">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/bluetooth_status"
+                    android:text="@string/bluetooth_header"
+                    />
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_bluetooth_disabled_black_24dp"
+                    android:id="@+id/bluetooth_search"
+                    style="@style/Widget.AppCompat.Button.Borderless"/>
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_settings_black_24dp"
+                    android:id="@+id/bluetooth_setting"
+                    style="@style/Widget.AppCompat.Button.Borderless"/>
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_scroll"
+                android:checked="true"
+                android:id="@+id/auto_scroll"/>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/log_scroll">
+
+                <TextView
+                    android:id="@+id/log_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:background="@android:color/transparent"
+                    android:inputType="none"
+                    android:textIsSelectable="true"
+                    android:gravity="top"
+                    android:fontFamily="monospace"/>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/data_tegangan"
+                    android:text="Tegangan"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/data_arus"
+                    android:text="Arus"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/data_tahanan"
+                    android:text="Tahanan"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/data_suhu"
+                    android:text="Suhu"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

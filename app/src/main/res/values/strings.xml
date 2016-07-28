@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">SOFCApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="auto_scroll">Auto scroll</string>
+    <string name="bluetooth_header">Sentuh icon bluetooth untuk mencari perangkat -></string>
+    <string name="drawer_open">Buka menu</string>
+    <string name="drawer_close">Tutup menu</string>
+    <string name="browse">Browse</string>
+    <string name="print">Cetak</string>
+    <string name="choose_device">Pilih perangkat</string>
+    <string name="refresh">Refresh</string>
+    <string name="about_us">Tentang kami</string>
+    <string name="about_us_desc">Aplikasi untuk mengambil data dari alat pengukur Solid Oxide Fuel Cell</string>
+
+    <string-array name="drawer_home_menus">
+        <item>SOFC App</item>
+    </string-array>
+
+    <string-array name="drawer_main_menus">
+        <item>Tabel data</item>
+        <item>Grafik data</item>
+        <item>Ambil data</item>
+        <item>Cetak laporan</item>
+    </string-array>
+
+    <string-array name="drawer_setting_menus">
+        <item>Pengaturan</item>
+        <item>Tentang kami</item>
+        <item>Keluar</item>
+    </string-array>
+
+    <string name="bluetooth_connecting">Menghubungkan bluetooth ke %1$s (%2$s)</string>
+    <string name="bluetooth_connected">Bluetooth terhubung ke %1$s (%2$s)</string>
+    <string name="bluetooth_disconnecting">Memutuskan sambungan bluetooth&#8230;</string>
+    <string name="bluetooth_disconnected">Sambungan bluetooth telah diputuskan</string>
+    <string name="bluetooth_connect_fail">Bluetooth gagal terhubung ke %1$s (%2$s)</string>
+    <string name="no_bluetooth_device">Perangkat anda tidak memiliki bluetooth</string>
+    <string name="bluetooth_turned_off">Bluetooth sudah dimatikan</string>
+    <string name="bluetooth_turning_off">Bluetooth sedang dimatikan</string>
+    <string name="bluetooth_turned_on">Bluetooth sudah dinyalakan</string>
+    <string name="bluetooth_turning_on">Bluetooth sedang dinyalakan</string>
+    <string name="bluetooth_enable_fail">Gagal menyalakan bluetooth</string>
+    <string name="bluetooth_starts_searching">Mencari perangkat bluetooth&#8230;</string>
+    <string name="bluetooth_stops_searching">Pencarian bluetooth dihentikan</string>
+
+    <string name="empty">Kosong</string>
+
+
+</resources>
