@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity{
             R.drawable.ic_get_app_black_24dp,
             R.drawable.ic_print_black_24dp
     };
-    
 
     String[] mDrawerSettingMenus;
     Integer[] mDrawerSettingMenuImages = {
