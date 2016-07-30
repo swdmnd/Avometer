@@ -22,12 +22,6 @@
                 android:layout_weight="1"
                 android:drawableRight="@drawable/ic_bluetooth_disabled_black_24dp"
                 style="@style/Widget.AppCompat.Button.Borderless"/>
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:drawableRight="@drawable/ic_bluetooth_disabled_black_24dp"
-                style="@style/Widget.AppCompat.Button.Borderless"/>
         </LinearLayout>
 
         <LinearLayout
