@@ -18,14 +18,16 @@ public class Constants {
     public static final int INPUT_LOG = 30;
     public static final int INPUT_COMMAND = 27; //RESERVED
 
-    public static final int STATUS_SUCCESS = 90;
-    public static final int STATUS_FAILED = 91;
-
     public static final int MAC_ADDRESS_LENGTH = 17;
 
     public static final int DRAWER_POSITION_MAIN_MENU = 40;
     public static final int DRAWER_POSITION_SETTING_MENU = 41;
     public static final int DRAWER_POSITION_HOME_MENU = 42;
+
+    public static final int STATUS_SUCCESS = 90;
+    public static final int STATUS_FAILED = 91;
+
+    public static final int KEY_BLUETOOTH_ICON = 101;
 
     public static final String STATUS_ARGS_STRING = "status_args_string";
 }
