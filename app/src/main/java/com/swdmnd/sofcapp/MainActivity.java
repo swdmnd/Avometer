@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
+import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.util.SparseArrayCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -22,41 +25,44 @@ import android.widget.ListView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
-public class MainActivity extends AppCompatActivity{
+import java.util.HashMap;
+import java.util.Map;
 
-    String[] mDrawerHomeMenus;
-    Integer[] mDrawerHomeMenuImages = {
-            R.drawable.ic_home_black_24dp
-    };
+public class MainActivity extends AppCompatActivity implements GetDataFragment.GetDataListener{
 
-    String[] mDrawerMainMenus;
-    Integer[] mDrawerImages = {
-            R.drawable.ic_chrome_reader_mode_black_24dp,
-            R.drawable.ic_show_chart_black_24dp,
-            R.drawable.ic_get_app_black_24dp,
-            R.drawable.ic_print_black_24dp
-    };
+    private String[] mDrawerHomeMenus;
+    private int[] mDrawerHomeMenuImages;
 
-    String[] mDrawerSettingMenus;
-    Integer[] mDrawerSettingMenuImages = {
-            R.drawable.ic_settings_black_24dp,
-            R.drawable.ic_info_outline_black_24dp,
-            R.drawable.ic_exit_to_app_black_24dp
-    };
+    private String[] mDrawerMainMenus;
+    private int[] mDrawerImages;
 
-    DrawerLayout mDrawerLayout;
-    ListView mDrawerList;
-    ListView mDrawerSettingMenuList;
-    ListView mDrawerHomeMenuList;
-    LinearLayout mDrawer;
+    private String[] mDrawerSettingMenus;
+    private int[] mDrawerSettingMenuImages;
+
+    private SparseArrayCompat<Integer> actionButtonIcon = new SparseArrayCompat<>();
+
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
+    private ListView mDrawerSettingMenuList;
+    private ListView mDrawerHomeMenuList;
+    private LinearLayout mDrawer;
     private ActionBarDrawerToggle mDrawerToggle;
     private CharSequence mTitle;
-    int statusBarHeight = 0;
+    private int statusBarHeight = 0;
 
-    int drawerMainMenuLastPosition=0, drawerSettingMenuLastPosition=0, drawerHomeMenuLastPosition;
-    int drawerCurrentPosition, drawerLastPosition;
-    Activity parentActivity;
+    private int drawerMainMenuLastPosition=0, drawerSettingMenuLastPosition=0, drawerHomeMenuLastPosition;
+    private int drawerCurrentPosition, drawerLastPosition;
+    private Activity parentActivity;
     private ActionBar actionBar;
+
+    private int[] assignIconsIds(TypedArray ar){
+        int len = ar.length();
+        int[] target = new int[len];
+        for (int i = 0; i < len; i++)
+            target[i] = ar.getResourceId(i, 0);
+        ar.recycle();
+        return target;
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +70,8 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         actionBar = getSupportActionBar();
+
+        actionButtonIcon.put(Constants.KEY_BLUETOOTH_ICON, R.drawable.ic_bluetooth_white_24dp);
 
         int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
         if (resourceId > 0) {
@@ -97,6 +105,10 @@ public class MainActivity extends AppCompatActivity{
         mDrawerMainMenus = getResources().getStringArray(R.array.drawer_main_menus);
         mDrawerSettingMenus = getResources().getStringArray(R.array.drawer_setting_menus);
         mDrawerHomeMenus = getResources().getStringArray(R.array.drawer_home_menus);
+
+        mDrawerImages = assignIconsIds(getResources().obtainTypedArray(R.array.drawer_main_icons));
+        mDrawerSettingMenuImages = assignIconsIds(getResources().obtainTypedArray(R.array.drawer_setting_icons));
+        mDrawerHomeMenuImages = assignIconsIds(getResources().obtainTypedArray(R.array.drawer_home_icons));
 
         // Set the adapter for the list view
         mDrawerList.setAdapter(new DrawerListAdapter(this, mDrawerMainMenus, mDrawerImages));
@@ -136,14 +148,14 @@ public class MainActivity extends AppCompatActivity{
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
                 //getActionBar().setTitle(mTitle);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+                //invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 //getActionBar().setTitle(mDrawerTitle);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+                //invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
 
@@ -181,10 +193,24 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    public void changeBluetoothIcon(int id){
+        actionButtonIcon.put(Constants.KEY_BLUETOOTH_ICON, id);
+        invalidateOptionsMenu();
+    }
+
     /* Called whenever we call invalidateOptionsMenu() */
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-
+        switch (drawerCurrentPosition){
+            case Constants.DRAWER_POSITION_MAIN_MENU:
+                switch (drawerMainMenuLastPosition){
+                    case 2:
+                        MenuItem settingsItem = menu.findItem(R.id.action_bluetooth_search);
+                        // set your desired icon here based on a flag if you like
+                        settingsItem.setIcon(ContextCompat.getDrawable(this, actionButtonIcon.get(Constants.KEY_BLUETOOTH_ICON)));
+                }
+                break;
+        }
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -318,11 +344,21 @@ public class MainActivity extends AppCompatActivity{
                 break;
         }
         drawerLastPosition = drawerCurrentPosition;
+        invalidateOptionsMenu();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        switch (drawerCurrentPosition){
+            case Constants.DRAWER_POSITION_MAIN_MENU:
+                switch (drawerMainMenuLastPosition){
+                    case 2:
+                        getMenuInflater().inflate(R.menu.menu_get_data, menu);
+                        break;
+                }
+                break;
+        }
         //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -339,14 +375,16 @@ public class MainActivity extends AppCompatActivity{
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        //int id = item.getItemId();
+        int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        //if (id == R.id.action_print) {
-        //    Toast.makeText(this, "Printing...", Toast.LENGTH_SHORT).show();
+        if (id == R.id.action_bluetooth_search) {
+            GetDataFragment getDataFragment = (GetDataFragment)
+                    getSupportFragmentManager().findFragmentById(R.id.content_frame);
+            getDataFragment.btSearch();
             //createPdf();
-        //    return true;
-        //}
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

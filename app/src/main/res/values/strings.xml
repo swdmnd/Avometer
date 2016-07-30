@@ -5,7 +5,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu">menu</string>
     <string name="auto_scroll">Auto scroll</string>
-    <string name="bluetooth_header">Sentuh icon bluetooth untuk mencari perangkat -></string>
+    <string name="bluetooth_header">Sentuh icon bluetooth (di kanan atas) untuk mencari perangkat</string>
     <string name="drawer_open">Buka menu</string>
     <string name="drawer_close">Tutup menu</string>
     <string name="browse">Browse</string>
@@ -14,23 +14,6 @@
     <string name="refresh">Refresh</string>
     <string name="about_us">Tentang kami</string>
     <string name="about_us_desc">Aplikasi untuk mengambil data dari alat pengukur Solid Oxide Fuel Cell</string>
-
-    <string-array name="drawer_home_menus">
-        <item>SOFC App</item>
-    </string-array>
-
-    <string-array name="drawer_main_menus">
-        <item>Tabel data</item>
-        <item>Grafik data</item>
-        <item>Ambil data</item>
-        <item>Cetak laporan</item>
-    </string-array>
-
-    <string-array name="drawer_setting_menus">
-        <item>Pengaturan</item>
-        <item>Tentang kami</item>
-        <item>Keluar</item>
-    </string-array>
 
     <string name="bluetooth_connecting">Menghubungkan bluetooth ke %1$s (%2$s)</string>
     <string name="bluetooth_connected">Bluetooth terhubung ke %1$s (%2$s)</string>
@@ -48,5 +31,41 @@
 
     <string name="empty">Kosong</string>
 
+    <string name="action_bluetooth_search">Cari bluetooth</string>
+    <string name="action_bluetooth_setting">Pengaturan ambil data</string>
+
+    <string-array name="drawer_home_menus">
+        <item>SOFC App</item>
+    </string-array>
+
+    <array name="drawer_home_icons">
+        <item>@drawable/ic_home_black_24dp</item>
+    </array>
+
+    <string-array name="drawer_main_menus">
+        <item>Tabel data</item>
+        <item>Grafik data</item>
+        <item>Ambil data</item>
+        <item>Cetak laporan</item>
+    </string-array>
+
+    <array name="drawer_main_icons">
+        <item>@drawable/ic_chrome_reader_mode_black_24dp</item>
+        <item>@drawable/ic_show_chart_black_24dp</item>
+        <item>@drawable/ic_get_app_black_24dp</item>
+        <item>@drawable/ic_print_black_24dp</item>
+    </array>
+
+    <string-array name="drawer_setting_menus">
+        <item>Pengaturan</item>
+        <item>Tentang kami</item>
+        <item>Keluar</item>
+    </string-array>
+
+    <array name="drawer_setting_icons">
+        <item>@drawable/ic_settings_black_24dp</item>
+        <item>@drawable/ic_info_outline_black_24dp</item>
+        <item>@drawable/ic_exit_to_app_black_24dp</item>
+    </array>
 
 </resources>
