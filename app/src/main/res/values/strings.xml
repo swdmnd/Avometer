@@ -3,6 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu">menu</string>
     <string name="auto_scroll">Auto scroll</string>
     <string name="bluetooth_header">Sentuh icon bluetooth untuk mencari perangkat -></string>
     <string name="drawer_open">Buka menu</string>

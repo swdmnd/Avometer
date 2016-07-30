@@ -4,46 +4,23 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
-import android.os.Environment;
-import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-
-import com.itextpdf.text.*;
-import com.itextpdf.text.List;
-import com.itextpdf.text.pdf.AcroFields;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfWriter;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.text.DateFormatSymbols;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -79,13 +56,14 @@ public class MainActivity extends AppCompatActivity{
     int drawerMainMenuLastPosition=0, drawerSettingMenuLastPosition=0, drawerHomeMenuLastPosition;
     int drawerCurrentPosition, drawerLastPosition;
     Activity parentActivity;
+    private ActionBar actionBar;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
 
-        final ActionBar actionBar = getSupportActionBar();
+        actionBar = getSupportActionBar();
 
         int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
         if (resourceId > 0) {
@@ -152,7 +130,7 @@ public class MainActivity extends AppCompatActivity{
 
         mTitle =  getTitle();
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-                R.drawable.ic_menu_white_24dp, R.string.drawer_open, R.string.drawer_close) {
+                R.string.drawer_open, R.string.drawer_close) {
 
             /** Called when a drawer has settled in a completely closed state. */
             public void onDrawerClosed(View view) {
@@ -170,11 +148,13 @@ public class MainActivity extends AppCompatActivity{
         };
 
         // Set the drawer toggle as the DrawerListener
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
 
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
+        if(actionBar != null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
+        }
 
         drawerCurrentPosition = drawerLastPosition = Constants.DRAWER_POSITION_HOME_MENU;
         selectItem(0);
@@ -196,7 +176,9 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;
-        getSupportActionBar().setTitle(mTitle);
+        if(actionBar != null){
+            actionBar.setTitle(mTitle);
+        }
     }
 
     /* Called whenever we call invalidateOptionsMenu() */
@@ -357,7 +339,7 @@ public class MainActivity extends AppCompatActivity{
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        //int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         //if (id == R.id.action_print) {

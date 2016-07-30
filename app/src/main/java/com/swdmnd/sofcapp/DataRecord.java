@@ -2,6 +2,7 @@ package com.swdmnd.sofcapp;
 
 /**
  * Created by Arief on 5/17/2016.
+ * A class for database record
  */
 public class DataRecord {
     // Column names
@@ -19,8 +20,6 @@ public class DataRecord {
     private Double current;
     private Double temperature;
     private Double resistance;
-
-    public DataRecord(){}
 
     public DataRecord(Integer id, String date, String time, Double voltage, Double current, Double temperature,  Double resistance){
         this.id = id;

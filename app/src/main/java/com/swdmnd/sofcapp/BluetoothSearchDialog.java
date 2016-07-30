@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -17,7 +18,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -99,7 +99,7 @@ public class BluetoothSearchDialog extends DialogFragment {
         super.onDismiss(dialog);
     }
 
-    @Override
+    @Override @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState){
         //Use builder class for convenient dialog construction
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -107,7 +107,7 @@ public class BluetoothSearchDialog extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.list_dialog, null);
         listView = (ListView) dialogView.findViewById(R.id.device_list);
-        listView.setAdapter((ListAdapter) mDeviceListAdapter);
+        listView.setAdapter(mDeviceListAdapter);
         emptyTextView = (TextView) dialogView.findViewById(R.id.bluetooth_empty);
         emptyTextView.setVisibility(View.VISIBLE);
         firstTime=1;
@@ -135,7 +135,7 @@ public class BluetoothSearchDialog extends DialogFragment {
 
                 mDeviceList = new ArrayList<>();
                 mDeviceListAdapter = new ArrayAdapter<>(getTargetFragment().getActivity(), R.layout.list, mDeviceList);
-                listView.setAdapter((ListAdapter) mDeviceListAdapter);
+                listView.setAdapter(mDeviceListAdapter);
                 emptyTextView.setVisibility(View.VISIBLE);
                 firstTime=1;
             }
@@ -151,47 +151,55 @@ public class BluetoothSearchDialog extends DialogFragment {
         public void onReceive(Context context, Intent intent) {
             final String action = intent.getAction();
 
-            if (action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
-                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE,
-                        BluetoothAdapter.ERROR);
-                switch (state) {
-                    case BluetoothAdapter.STATE_OFF:
-                        Toast.makeText(context, getResources().getString(R.string.bluetooth_turned_off), Toast.LENGTH_SHORT).show();
-                        break;
-                    case BluetoothAdapter.STATE_TURNING_OFF:
-                        Toast.makeText(context, getResources().getString(R.string.bluetooth_turning_off), Toast.LENGTH_SHORT).show();
-                        break;
-                    case BluetoothAdapter.STATE_ON:
-                        Toast.makeText(context, getResources().getString(R.string.bluetooth_turned_on), Toast.LENGTH_SHORT).show();
-                        break;
-                    case BluetoothAdapter.STATE_TURNING_ON:
-                        Toast.makeText(context, getResources().getString(R.string.bluetooth_turning_on), Toast.LENGTH_SHORT).show();
-                        break;
-                }
-            } else if (action.equals(BluetoothDevice.ACTION_FOUND)){
-                if(firstTime==1){
-                    firstTime=0;
-                    emptyTextView.setVisibility(View.GONE);
-                }
-                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-                mDeviceList.add(device.getName() + "\n" + device.getAddress());
-                mDeviceListAdapter.notifyDataSetChanged();
-            } else if (action.equals(BluetoothAdapter.ACTION_DISCOVERY_STARTED)){
-                mDeviceList.clear();
-                Toast.makeText(context, getResources().getString(R.string.bluetooth_starts_searching), Toast.LENGTH_SHORT).show();
-            } else if (action.equals(BluetoothAdapter.ACTION_DISCOVERY_FINISHED)){
-                mBluetoothAdapter.cancelDiscovery();
-                Toast.makeText(context, getResources().getString(R.string.bluetooth_stops_searching), Toast.LENGTH_SHORT).show();
+            switch(action){
+                case BluetoothAdapter.ACTION_STATE_CHANGED:
+                    final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE,
+                            BluetoothAdapter.ERROR);
+                    switch (state) {
+                        case BluetoothAdapter.STATE_OFF:
+                            Toast.makeText(context, getResources().getString(R.string.bluetooth_turned_off), Toast.LENGTH_SHORT).show();
+                            break;
+                        case BluetoothAdapter.STATE_TURNING_OFF:
+                            Toast.makeText(context, getResources().getString(R.string.bluetooth_turning_off), Toast.LENGTH_SHORT).show();
+                            break;
+                        case BluetoothAdapter.STATE_ON:
+                            Toast.makeText(context, getResources().getString(R.string.bluetooth_turned_on), Toast.LENGTH_SHORT).show();
+                            break;
+                        case BluetoothAdapter.STATE_TURNING_ON:
+                            Toast.makeText(context, getResources().getString(R.string.bluetooth_turning_on), Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                    break;
+
+                case BluetoothDevice.ACTION_FOUND:
+                    if(firstTime==1){
+                        firstTime=0;
+                        emptyTextView.setVisibility(View.GONE);
+                    }
+                    BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                    mDeviceList.add(device.getName() + "\n" + device.getAddress());
+                    mDeviceListAdapter.notifyDataSetChanged();
+                    break;
+
+                case BluetoothAdapter.ACTION_DISCOVERY_STARTED:
+                    mDeviceList.clear();
+                    Toast.makeText(context, getResources().getString(R.string.bluetooth_starts_searching), Toast.LENGTH_SHORT).show();
+                    break;
+
+                case BluetoothAdapter.ACTION_DISCOVERY_FINISHED:
+                    mBluetoothAdapter.cancelDiscovery();
+                    Toast.makeText(context, getResources().getString(R.string.bluetooth_stops_searching), Toast.LENGTH_SHORT).show();
+                    break;
             }
         }
     };
 
     public void  onActivityResult(int requestCode, int resultCode, Intent data){
         if (requestCode == Constants.REQUEST_ENABLE_BT){
-            if(resultCode == parentActivity.RESULT_OK){
+            if(resultCode == Activity.RESULT_OK){
                 //If bluetooth is enabled successfully
                 mBluetoothAdapter.startDiscovery();
-            } else if (resultCode == parentActivity.RESULT_CANCELED){
+            } else if (resultCode == Activity.RESULT_CANCELED){
                 Toast.makeText(parentActivity, getResources().getString(R.string.bluetooth_enable_fail), Toast.LENGTH_SHORT).show();
             }
         }

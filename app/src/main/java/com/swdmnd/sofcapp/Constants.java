@@ -2,6 +2,7 @@ package com.swdmnd.sofcapp;
 
 /**
  * Created by Arief on 9/3/2015.
+ * A class holding constants that is used or will be used in SOFCApp
  */
 public class Constants {
     public static final int MESSAGE_READ = 1;

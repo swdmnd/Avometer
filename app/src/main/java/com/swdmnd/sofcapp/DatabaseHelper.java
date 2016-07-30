@@ -11,11 +11,12 @@ import java.util.List;
 
 /**
  * Created by Arief on 5/16/2016.
+ * An SQLite database helper
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Logcat tag
-    private static final String LOG = "com.swdmnd.sofcapp.DatabaseHelper";
+    //private static final String TAG = "com.swdmnd.sofcapp.DatabaseHelper";
 
     // Database Version
     private static final int DATABASE_VERSION = 5;
@@ -65,7 +66,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public List<String> listDates(){
-        List<String> dateList = new ArrayList<String>();
+        List<String> dateList = new ArrayList<>();
         String selectQuery = "SELECT DISTINCT " + COL_DATE + " FROM " + TABLE_NAME + " ORDER BY DATE(" + COL_DATE + ") ASC";
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -78,11 +79,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (c.moveToNext());
         }
 
+        c.close();
+
         return dateList;
     }
 
     public List<DataRecord> getDailyRecord(String date){
-        List<DataRecord> dailyRecords = new ArrayList<DataRecord>();
+        List<DataRecord> dailyRecords = new ArrayList<>();
         String selectQuery = "SELECT * FROM " + TABLE_NAME + " WHERE " + COL_DATE + " = '" + date + "'" + " ORDER BY TIME(" + COL_TIME  + ") ASC";
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -104,6 +107,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (c.moveToNext());
         }
 
+        c.close();
         return dailyRecords;
     }
 
@@ -135,6 +139,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             lastId = c.getInt(c.getColumnIndex(COL_ID));
         }
 
+        c.close();
         return lastId;
     }
 }

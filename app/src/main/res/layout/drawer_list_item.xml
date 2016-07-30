@@ -9,13 +9,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_settings_applications_black_24dp"
-        android:id="@+id/drawer_img"/>
+        android:id="@+id/drawer_img"
+        android:contentDescription="@string/menu"/>
     <TextView
         android:id="@+id/drawer_list_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"/>
 
 </LinearLayout>

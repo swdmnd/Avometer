@@ -7,7 +7,6 @@ import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,6 +15,7 @@ import java.util.UUID;
 
 /**
  * Created by Arief on 9/2/2015.
+ * A service for handling bluetooth connection
  */
 public class BluetoothConnectionService {
     BluetoothAdapter mBluetoothAdapter = null;
@@ -29,6 +29,8 @@ public class BluetoothConnectionService {
     String dataString = "";
     int counter =0;
     Activity parentActivity;
+
+    private final static String LOG_TAG = "Bluetooth Service";
 
     public BluetoothConnectionService(Context context, Handler handler, BluetoothAdapter bluetoothAdapter){
         mBluetoothAdapter = bluetoothAdapter;
@@ -83,6 +85,7 @@ public class BluetoothConnectionService {
                 mBluetoothSocket.close();
                 connected = false;
             } catch (IOException e) {
+                Log.e(LOG_TAG, e.toString());
             }
         }
     }
@@ -99,7 +102,7 @@ public class BluetoothConnectionService {
             try {
                 mBluetoothSocket = mmDevice.createRfcommSocketToServiceRecord(MY_UUID);
             } catch (IOException e) {
-
+                Log.e(LOG_TAG, e.toString());
             }
         }
 
@@ -115,7 +118,7 @@ public class BluetoothConnectionService {
                 try {
                     mBluetoothSocket.close();
                 } catch (IOException e2) {
-
+                    Log.e(LOG_TAG, e.toString());
                 }
             }
 
@@ -132,8 +135,8 @@ public class BluetoothConnectionService {
             try {
                 mBluetoothSocket.close();
                 connected = false;
-            } catch (IOException e2) {
-
+            } catch (IOException e) {
+                Log.e(LOG_TAG, e.toString());
             }
         }
     }
@@ -153,7 +156,9 @@ public class BluetoothConnectionService {
             try {
                 tmpIn = socket.getInputStream();
                 tmpOut = socket.getOutputStream();
-            } catch (IOException e) { }
+            } catch (IOException e) {
+                Log.e(LOG_TAG, e.toString());
+            }
 
             inputStream = tmpIn;
             outputStream = tmpOut;
@@ -184,7 +189,7 @@ public class BluetoothConnectionService {
                         }
                     }
                 } catch (IOException e) {
-                    Log.i("bluetooth service", e.toString());
+                    Log.i(LOG_TAG, e.toString());
                     break;
                 }
             }
@@ -193,7 +198,9 @@ public class BluetoothConnectionService {
         public void write(byte[] bytes){
             try{
                 outputStream.write(bytes);
-            } catch (IOException e){}
+            } catch (IOException e){
+                Log.e(LOG_TAG, e.toString());
+            }
         }
         public void cancel(){
             try{
@@ -201,7 +208,9 @@ public class BluetoothConnectionService {
                 if(inputStream != null) inputStream.close();
                 if(outputStream != null) outputStream.close();
                 connected = false;
-            } catch (IOException e){}
+            } catch (IOException e){
+                Log.e(LOG_TAG, e.toString());
+            }
         }
     }
 }
