@@ -29,21 +29,6 @@
                     android:id="@+id/bluetooth_status"
                     android:text="@string/bluetooth_header"
                     />
-                <Button
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_bluetooth_disabled_black_24dp"
-                    android:id="@+id/bluetooth_search"
-                    style="@style/Widget.AppCompat.Button.Borderless"/>
-                <View
-                    android:layout_width="12dp"
-                    android:layout_height="match_parent" />
-                <Button
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_settings_black_24dp"
-                    android:id="@+id/bluetooth_setting"
-                    style="@style/Widget.AppCompat.Button.Borderless"/>
             </LinearLayout>
 
             <CheckBox
