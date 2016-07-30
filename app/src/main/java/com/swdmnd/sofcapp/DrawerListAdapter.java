@@ -15,7 +15,6 @@ import android.widget.TextView;
 public class DrawerListAdapter extends ArrayAdapter<String> {
     private final String[] itemname;
     private final int[] imgid;
-    private View rowView;
     private LayoutInflater layoutInflater;
 
     public DrawerListAdapter(Activity context, String[] itemname, int[] imgid) {
@@ -27,7 +26,7 @@ public class DrawerListAdapter extends ArrayAdapter<String> {
     }
 
     public View getView(int position,View view,ViewGroup parent) {
-        rowView=layoutInflater.inflate(R.layout.drawer_list_item, null,true);
+        View rowView=layoutInflater.inflate(R.layout.drawer_list_item, null,true);
         TextView txtTitle = (TextView) rowView.findViewById(R.id.drawer_list_title);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.drawer_img);
 
