@@ -14,11 +14,11 @@ import android.widget.TextView;
  */
 public class DrawerListAdapter extends ArrayAdapter<String> {
     private final String[] itemname;
-    private final Integer[] imgid;
+    private final int[] imgid;
     private View rowView;
     private LayoutInflater layoutInflater;
 
-    public DrawerListAdapter(Activity context, String[] itemname, Integer[] imgid) {
+    public DrawerListAdapter(Activity context, String[] itemname, int[] imgid) {
         super(context, R.layout.drawer_list_item, itemname);
         // TODO Auto-generated constructor stub
         this.itemname=itemname;
