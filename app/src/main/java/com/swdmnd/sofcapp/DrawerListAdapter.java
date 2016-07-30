@@ -1,6 +1,7 @@
 package com.swdmnd.sofcapp;
 
 import android.app.Activity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -15,16 +16,18 @@ public class DrawerListAdapter extends ArrayAdapter<String> {
     private final String[] itemname;
     private final Integer[] imgid;
     private View rowView;
+    private LayoutInflater layoutInflater;
 
     public DrawerListAdapter(Activity context, String[] itemname, Integer[] imgid) {
         super(context, R.layout.drawer_list_item, itemname);
         // TODO Auto-generated constructor stub
         this.itemname=itemname;
         this.imgid=imgid;
-        rowView=context.getLayoutInflater().inflate(R.layout.drawer_list_item, null,true);
+        layoutInflater = context.getLayoutInflater();
     }
 
     public View getView(int position,View view,ViewGroup parent) {
+        rowView=layoutInflater.inflate(R.layout.drawer_list_item, null,true);
         TextView txtTitle = (TextView) rowView.findViewById(R.id.drawer_list_title);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.drawer_img);
 

@@ -46,7 +46,9 @@ public class TableFragment extends Fragment {
     private String mParam2;
 
     private ProgressDialog pDialog;
+
     private OnFragmentInteractionListener mListener;
+
     int statusBarHeight = 0;
 
     /**
@@ -101,14 +103,9 @@ public class TableFragment extends Fragment {
         });
 
         fragmentLayout.findViewById(R.id.root_view).setPadding(0, statusBarHeight, 0, 0);
+        updateTable();
 
         return fragmentLayout;
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        new LoadTable().execute();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -137,28 +134,6 @@ public class TableFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
-    }
-
-    class LoadTable extends AsyncTask<String, String, String> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            pDialog = new ProgressDialog(getActivity());
-            pDialog.setMessage("Sedang memuat...");
-            pDialog.setCanceledOnTouchOutside(false);
-            pDialog.show();
-        }
-
-        @Override
-        protected String doInBackground(String... argumentsOnClassExecute) {
-            updateTable();
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String stringFromDoInBackground) {
-            pDialog.dismiss();
-        }
     }
 
     public void updateTable(){
@@ -257,6 +232,6 @@ public class TableFragment extends Fragment {
         );
 
         databaseHelper.recordData(dataRecord);
-        new LoadTable().execute();
+        updateTable();
     }
 }
