@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,97 +7,87 @@
     android:id="@+id/root_view">
 
     <LinearLayout
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/footer"
+        android:padding="8dp">
 
-        <!-- TODO: Update blank fragment layout -->
-        <LinearLayout
-            android:layout_height="0dp"
+        <TextView
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bluetooth_status"
+            android:text="@string/bluetooth_header"
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/auto_scroll"
+            android:checked="true"
+            android:id="@+id/auto_scroll"/>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:padding="8dp">
-            <LinearLayout
+            android:id="@+id/log_scroll">
+
+            <TextView
+                android:id="@+id/log_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/bluetooth_status"
-                    android:text="@string/bluetooth_header"
-                    />
-            </LinearLayout>
+                android:textSize="12sp"
+                android:background="@android:color/transparent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:gravity="top"
+                android:fontFamily="monospace"/>
 
-            <CheckBox
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/auto_scroll"
-                android:checked="true"
-                android:id="@+id/auto_scroll"/>
+        </ScrollView>
+    </LinearLayout>
 
-            <ScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/log_scroll">
-
-                <TextView
-                    android:id="@+id/log_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:background="@android:color/transparent"
-                    android:inputType="none"
-                    android:textIsSelectable="true"
-                    android:gravity="top"
-                    android:fontFamily="monospace"/>
-
-            </ScrollView>
-        </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:id="@+id/footer">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/data_tegangan"
-                    android:text="Tegangan"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/data_arus"
-                    android:text="Arus"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/data_tegangan"
+                android:text="Tegangan"/>
+            <TextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/data_tahanan"
-                    android:text="Tahanan"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/data_suhu"
-                    android:text="Suhu"/>
-            </LinearLayout>
+                android:layout_weight="1"
+                android:id="@+id/data_arus"
+                android:text="Arus"/>
         </LinearLayout>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/data_tahanan"
+                android:text="Tahanan"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/data_suhu"
+                android:text="Suhu"/>
+        </LinearLayout>
     </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>
