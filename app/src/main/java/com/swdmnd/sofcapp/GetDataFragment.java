@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -56,7 +55,6 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
 
     TextView logView, statusView;
     ScrollView logScroll;
-    Button btSearchButton;
     private Activity parentActivity;
     int statusBarHeight;
     String[] dataTokens;
@@ -67,6 +65,26 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
     TextView suhutv;
 
     Resources res;
+
+    public interface GetDataListener {
+        public void changeBluetoothIcon(int id);
+    }
+
+    GetDataListener mCallBack;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        // Verify that the host activity implements the callback interface
+        try {
+            // Instantiate the NoticeDialogListener so we can send events to the host
+            mCallBack = (GetDataListener) getActivity();
+        } catch (ClassCastException e) {
+            // The activity doesn't implement the interface, throw exception
+            throw new ClassCastException(getTargetFragment().toString()
+                    + " must implement BluetoothSearchDialogListener");
+        }
+    }
 
     final Handler btServiceHandler = new Handler() {
         public void handleMessage(Message msg){
@@ -150,7 +168,7 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
                 msg = String.format(res.getString(R.string.bluetooth_connected),device.getName(), device.getAddress());
                 statusView.setText(msg);
                 updateLog(msg + "\n", Constants.LOG_SYSTEM);
-                btSearchButton.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_bluetooth_connected_black_24dp, 0);
+                mCallBack.changeBluetoothIcon(R.drawable.ic_bluetooth_connected_white_24dp);
             } else if (action.equals(BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED)){
                 msg = res.getString(R.string.bluetooth_disconnecting);
                 statusView.setText(msg);
@@ -159,7 +177,7 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
                 msg = res.getString(R.string.bluetooth_disconnected);
                 statusView.setText(msg);
                 updateLog(msg + "\n", Constants.LOG_SYSTEM);
-                btSearchButton.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_bluetooth_disabled_black_24dp, 0);
+                mCallBack.changeBluetoothIcon(R.drawable.ic_bluetooth_white_24dp);
             }
         }
     };
@@ -197,18 +215,6 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
         statusView = (TextView) view.findViewById(R.id.bluetooth_status);
         logView = (TextView) view.findViewById(R.id.log_text);
         logScroll = (ScrollView) view.findViewById(R.id.log_scroll);
-        btSearchButton = (Button) view.findViewById(R.id.bluetooth_search);
-        btSearchButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                btSearch();
-            }
-        });
-        Button btSettings = (Button) view.findViewById(R.id.bluetooth_setting);
-        btSettings.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Toast.makeText(getActivity(), "Settings is not applied yet", Toast.LENGTH_SHORT).show();
-            }
-        });
         CheckBox autoScrollCheckBox = (CheckBox) view.findViewById(R.id.auto_scroll);
         autoScrollCheckBox.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -267,7 +273,7 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
         void onFragmentInteraction(Uri uri);
     }
 
-    void btSearch(){
+    public void btSearch(){
         BluetoothSearchDialog btSearchDialog = new BluetoothSearchDialog();
         btSearchDialog.setTargetFragment(this, 1);
         btSearchDialog.show(getFragmentManager().beginTransaction(), null);
