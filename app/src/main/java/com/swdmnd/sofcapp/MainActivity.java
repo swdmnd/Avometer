@@ -201,13 +201,15 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
     /* Called whenever we call invalidateOptionsMenu() */
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem settingsItem;
         switch (drawerCurrentPosition){
             case Constants.DRAWER_POSITION_MAIN_MENU:
                 switch (drawerMainMenuLastPosition){
                     case 2:
-                        MenuItem settingsItem = menu.findItem(R.id.action_bluetooth_search);
+                        settingsItem = menu.findItem(R.id.action_bluetooth_search);
                         // set your desired icon here based on a flag if you like
                         settingsItem.setIcon(ContextCompat.getDrawable(this, actionButtonIcon.get(Constants.KEY_BLUETOOTH_ICON)));
+                        break;
                 }
                 break;
         }
@@ -353,6 +355,11 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
         switch (drawerCurrentPosition){
             case Constants.DRAWER_POSITION_MAIN_MENU:
                 switch (drawerMainMenuLastPosition){
+                    case 0:
+                    case 1:
+                        getMenuInflater().inflate(R.menu.menu_data_utilities, menu);
+                        break;
+
                     case 2:
                         getMenuInflater().inflate(R.menu.menu_get_data, menu);
                         break;
@@ -378,12 +385,17 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_bluetooth_search) {
-            GetDataFragment getDataFragment = (GetDataFragment)
-                    getSupportFragmentManager().findFragmentById(R.id.content_frame);
-            getDataFragment.btSearch();
-            //createPdf();
-            return true;
+        switch(id){
+            case R.id.action_bluetooth_search:
+                GetDataFragment getDataFragment = (GetDataFragment)
+                        getSupportFragmentManager().findFragmentById(R.id.content_frame);
+                getDataFragment.btSearch();
+                //createPdf();
+                return true;
+
+            case R.id.action_get_data:
+                drawerCurrentPosition = Constants.DRAWER_POSITION_MAIN_MENU;
+                selectItem(2);
         }
 
         return super.onOptionsItemSelected(item);

@@ -4,19 +4,17 @@
     android:orientation="vertical"
     tools:context="com.swdmnd.sofcapp.TableFragment"
     android:layout_marginTop="?attr/actionBarSize"
-    android:id="@+id/root_view">
+    android:id="@+id/root_view"
+    android:padding="8dp">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp">
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Spinner>
-
-    </LinearLayout>
+        android:textStyle="italic"
+        android:text="@string/empty_database"
+        android:gravity="center"
+        style="?android:attr/textAppearanceSmall"
+        android:id="@+id/database_empty"/>
 
     <ScrollView
         android:layout_width="match_parent"

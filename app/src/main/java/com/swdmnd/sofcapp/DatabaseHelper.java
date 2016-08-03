@@ -77,6 +77,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             do {
                 dateList.add(c.getString(c.getColumnIndex(COL_DATE)));
             } while (c.moveToNext());
+        } else {
+            c.close();
+            return null;
         }
 
         c.close();
@@ -105,6 +108,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 );
                 dailyRecords.add(dataRecord);
             } while (c.moveToNext());
+        } else {
+            c.close();
+            return null;
         }
 
         c.close();
@@ -137,6 +143,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         if (c.moveToFirst()) {
             lastId = c.getInt(c.getColumnIndex(COL_ID));
+        } else {
+            c.close();
+            return -1;
         }
 
         c.close();

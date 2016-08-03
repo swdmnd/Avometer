@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,8 @@ import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,11 +39,6 @@ public class TableFragment extends Fragment {
 
     DatabaseHelper databaseHelper;
 
-    private TextView tableHeader;
-    private TextView[] tableDatas = new TextView[5];
-    private TableRow tableRow;
-    private TableLayout tableLayout;
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -48,6 +46,8 @@ public class TableFragment extends Fragment {
     private ProgressDialog pDialog;
 
     private OnFragmentInteractionListener mListener;
+    View fragmentLayout;
+    TextView noDataIndicator;
 
     int statusBarHeight = 0;
 
@@ -90,9 +90,7 @@ public class TableFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View fragmentLayout = inflater.inflate(R.layout.fragment_table, container, false);
-
-        tableLayout = (TableLayout) fragmentLayout.findViewById(R.id.main_table);
+        fragmentLayout = inflater.inflate(R.layout.fragment_table, container, false);
 
         Button addRecordButton = (Button) fragmentLayout.findViewById(R.id.btnAddRecord);
         addRecordButton.setOnClickListener( new View.OnClickListener() {
@@ -103,7 +101,10 @@ public class TableFragment extends Fragment {
         });
 
         fragmentLayout.findViewById(R.id.root_view).setPadding(0, statusBarHeight, 0, 0);
-        updateTable();
+
+        noDataIndicator = (TextView) fragmentLayout.findViewById(R.id.database_empty);
+
+        new LoadTableData().execute();
 
         return fragmentLayout;
     }
@@ -136,87 +137,163 @@ public class TableFragment extends Fragment {
         public void onFragmentInteraction(Uri uri);
     }
 
-    public void updateTable(){
-        tableLayout.removeAllViews();
+    private class LoadTableData extends AsyncTask<String, Object, Object>{
+        TextView tableCell;
+        List<String> dateLists;
+        List<DataRecord> dailyRecords;
+        TableRow tableRow;
+        private ProgressDialog pDialog;
+        TableLayout tableLayout;
 
-        List<String> dateLists = new ArrayList<>();
-        List<DataRecord> dailyRecords = new ArrayList<DataRecord>();
-        dateLists = databaseHelper.listDates();
+        int backgroundProcessStatus;
+        private final int WAITING_UI_THREAD = 0;
+        private final int UI_THREAD_READY = 1;
 
-        for (int i =0; i <5; ++i) {
-            tableDatas[i] = new TextView(getActivity());
-            tableDatas[i].setBackgroundResource(R.drawable.table_header_cell);
-            tableDatas[i].setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
-            tableDatas[i].setGravity(Gravity.CENTER);
-            tableDatas[i].setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
-            tableDatas[i].setPadding(4, 4, 4, 4);
-            tableDatas[i].setTextColor(Color.WHITE);
-            tableDatas[i].setTypeface(null, Typeface.BOLD);
+        int tableRowPosition;
+        private final int TABLE_HEADER_ROW = 2;
+        private final int TABLE_DATE_ROW = 3;
+        private final int TABLE_DATA_ROW = 4;
+
+        @Override
+        protected void onPreExecute(){
+            super.onPreExecute();
+            tableLayout = new TableLayout(getActivity());
+            dateLists = new ArrayList<>();
+            dailyRecords = new ArrayList<>();
+
+            backgroundProcessStatus = UI_THREAD_READY;
+            tableRowPosition = TABLE_HEADER_ROW;
+
+            noDataIndicator.setVisibility(View.VISIBLE);
+
+            pDialog = new ProgressDialog(getActivity());
+            pDialog.setMessage("Sedang memuat...");
+            pDialog.setCancelable(false);
+            pDialog.setCanceledOnTouchOutside(false);
+            pDialog.show();
         }
 
-        tableDatas[0].setText("Waktu");
-        tableDatas[1].setText("Tegangan (V)");
-        tableDatas[2].setText("Arus (A)");
-        tableDatas[3].setText("Suhu (C)");
-        tableDatas[4].setText("Resistansi");
-
-        tableRow = new TableRow(getActivity());
-        tableRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-
-        for (int i =0; i <5; ++i) {
-            tableRow.addView(tableDatas[i], i);
-        }
-        tableLayout.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
-
-        for (String date : dateLists){
-            tableHeader = new TextView(getActivity());
-            tableHeader.setBackgroundResource(R.drawable.table_date_cell);
-            tableHeader.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
-            tableHeader.setGravity(Gravity.CENTER);
-            tableHeader.setTypeface(null, Typeface.BOLD);
-            tableHeader.setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
-            tableHeader.setPadding(4,4,4,4);
-
-            tableHeader.setText(date);
-
+        @Override
+        protected void onProgressUpdate(Object... args){
             tableRow = new TableRow(getActivity());
             tableRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+            int index = 0;
+            switch(tableRowPosition){
+                case TABLE_HEADER_ROW:
+                    String[] headerTexts = {
+                            "Waktu", "Tegangan (V)", "Arus (mA)", "Suhu (C)", "Resistansi"
+                    };
+                    for(String headerText : headerTexts){
+                        tableCell = new TextView(getActivity());
+                        tableCell.setBackgroundResource(R.drawable.table_header_cell);
+                        tableCell.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
+                        tableCell.setGravity(Gravity.CENTER);
+                        tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
+                        tableCell.setPadding(4, 4, 4, 4);
+                        tableCell.setTextColor(Color.WHITE);
+                        tableCell.setTypeface(null, Typeface.BOLD);
+                        tableCell.setText(headerText);
 
-            tableRow.addView(tableHeader, 0);
+                        tableRow.addView(tableCell, index++);
+                    }
+                    tableLayout.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+                    backgroundProcessStatus = UI_THREAD_READY;
+                    break;
 
-            tableLayout.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+                case TABLE_DATE_ROW:
+                    tableCell = new TextView(getActivity());
+                    tableCell.setBackgroundResource(R.drawable.table_date_cell);
+                    tableCell.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
+                    tableCell.setGravity(Gravity.CENTER);
+                    tableCell.setTypeface(null, Typeface.BOLD);
+                    tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
+                    tableCell.setPadding(4,4,4,4);
+                    tableCell.setText((String) args[0]);
 
-            dailyRecords =  databaseHelper.getDailyRecord(date);
+                    tableRow.addView(tableCell, index);
+                    tableLayout.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+                    backgroundProcessStatus = UI_THREAD_READY;
+                    break;
 
-            int index = 1;
-            for (DataRecord dailyRecord : dailyRecords){
-                for (int i =0; i <5; ++i) {
-                    tableDatas[i] = new TextView(getActivity());
-                    if (index%2 == 1) tableDatas[i].setBackgroundResource(R.drawable.table_data_odd);
-                    else tableDatas[i].setBackgroundResource(R.drawable.table_data_even);
-                    tableDatas[i].setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
-                    tableDatas[i].setGravity(Gravity.CENTER);
-                    tableDatas[i].setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
-                    tableDatas[i].setPadding(4,4,4,4);
-                }
+                case TABLE_DATA_ROW:
+                    int row_index = 1;
+                    for (DataRecord dailyRecord : dailyRecords){
+                        index = 0;
+                        String[] cellTexts = {
+                                dailyRecord.getTime(),
+                                Double.toString(dailyRecord.getVoltage()),
+                                Double.toString(dailyRecord.getCurrent()),
+                                Double.toString(dailyRecord.getTemperature()),
+                                Double.toString(dailyRecord.getResistance())
+                        };
+                        tableRow = new TableRow(getActivity());
+                        tableRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
 
-                ++index;
+                        for (String cellText : cellTexts) {
+                            tableCell = new TextView(getActivity());
+                            if (row_index%2 == 1) tableCell.setBackgroundResource(R.drawable.table_data_odd);
+                            else tableCell.setBackgroundResource(R.drawable.table_data_even);
+                            tableCell.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
+                            tableCell.setGravity(Gravity.CENTER);
+                            tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
+                            tableCell.setPadding(4,4,4,4);
+                            tableCell.setText(cellText);
 
-                tableDatas[0].setTypeface(null, Typeface.BOLD);
-                tableDatas[0].setText(dailyRecord.getTime());
-                tableDatas[1].setText(Double.toString(dailyRecord.getVoltage()));
-                tableDatas[2].setText(Double.toString(dailyRecord.getCurrent()));
-                tableDatas[3].setText(Double.toString(dailyRecord.getTemperature()));
-                tableDatas[4].setText(Double.toString(dailyRecord.getResistance()));
+                            tableRow.addView(tableCell, index);
+                        }
 
-                tableRow = new TableRow(getActivity());
-                tableRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-
-                for (int i =0; i <5; ++i) {
-                    tableRow.addView(tableDatas[i], i);
-                }
-                tableLayout.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+                        tableLayout.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+                        ++row_index;
+                    }
+                    backgroundProcessStatus = UI_THREAD_READY;
+                    break;
             }
+        }
+
+        @Override
+        protected Object doInBackground(String... args){
+            dateLists = databaseHelper.listDates();
+            if (dateLists!=null){
+                backgroundProcessStatus = WAITING_UI_THREAD;
+                publishProgress();
+                while(backgroundProcessStatus == WAITING_UI_THREAD){
+                    if(isCancelled()) return null;
+                }
+                
+                for (String date : dateLists){
+                    tableRowPosition = TABLE_DATE_ROW;
+                    backgroundProcessStatus = WAITING_UI_THREAD;
+                    publishProgress(date);
+                    while(backgroundProcessStatus == WAITING_UI_THREAD){
+                        if(isCancelled()) return null;
+                    }
+
+                    dailyRecords =  databaseHelper.getDailyRecord(date);
+                    tableRowPosition = TABLE_DATA_ROW;
+                    backgroundProcessStatus = WAITING_UI_THREAD;
+                    publishProgress(dailyRecords);
+                    while(backgroundProcessStatus == WAITING_UI_THREAD){
+                        if(isCancelled()) return null;
+                    }
+                }
+            } else {
+                return 1;
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Object arg){
+            if(arg == null){
+                View tableView = fragmentLayout.findViewById(R.id.main_table);
+                ViewGroup parent = (ViewGroup) tableView.getParent();
+                int index = parent.indexOfChild(tableView);
+                parent.removeView(tableView);
+                tableLayout.setId(R.id.main_table);
+                parent.addView(tableLayout, index);
+                noDataIndicator.setVisibility(View.GONE);
+            }
+            pDialog.dismiss();
         }
     }
 
@@ -232,6 +309,6 @@ public class TableFragment extends Fragment {
         );
 
         databaseHelper.recordData(dataRecord);
-        updateTable();
+        new LoadTableData().execute();
     }
 }
