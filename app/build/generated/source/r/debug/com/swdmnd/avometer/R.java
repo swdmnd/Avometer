@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.swdmnd.sofcapp;
+package com.swdmnd.avometer;
 
 public final class R {
     public static final class anim {
@@ -1664,7 +1664,7 @@ containing a value of this type.
         public static final int tick=0x7f020070;
     }
     public static final class id {
-        public static final int action0=0x7f0d0076;
+        public static final int action0=0x7f0d0079;
         public static final int action_bar=0x7f0d0041;
         public static final int action_bar_activity_content=0x7f0d0000;
         public static final int action_bar_container=0x7f0d0040;
@@ -1672,12 +1672,12 @@ containing a value of this type.
         public static final int action_bar_spinner=0x7f0d0001;
         public static final int action_bar_subtitle=0x7f0d0022;
         public static final int action_bar_title=0x7f0d0021;
-        public static final int action_bluetooth_search=0x7f0d0085;
-        public static final int action_bluetooth_setting=0x7f0d0086;
+        public static final int action_bluetooth_search=0x7f0d0088;
+        public static final int action_bluetooth_setting=0x7f0d0089;
         public static final int action_context_bar=0x7f0d0042;
-        public static final int action_divider=0x7f0d007a;
-        public static final int action_filter_data=0x7f0d0084;
-        public static final int action_get_data=0x7f0d0083;
+        public static final int action_divider=0x7f0d007d;
+        public static final int action_filter_data=0x7f0d0087;
+        public static final int action_get_data=0x7f0d0086;
         public static final int action_menu_divider=0x7f0d0002;
         public static final int action_menu_presenter=0x7f0d0003;
         public static final int action_mode_bar=0x7f0d003e;
@@ -1686,36 +1686,37 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f0d0024;
         public static final int alertTitle=0x7f0d0030;
         public static final int always=0x7f0d001c;
-        public static final int auto_scroll=0x7f0d0065;
+        public static final int auto_scroll=0x7f0d0067;
         public static final int beginning=0x7f0d0019;
-        public static final int bluetooth_empty=0x7f0d0073;
+        public static final int bluetooth_empty=0x7f0d0076;
         public static final int bluetooth_status=0x7f0d0064;
-        public static final int btRefresh=0x7f0d0075;
-        public static final int btnAddRecord=0x7f0d0071;
-        public static final int btn_browse=0x7f0d006d;
-        public static final int btn_cetak=0x7f0d006e;
+        public static final int btRefresh=0x7f0d0078;
+        public static final int btnAddRecord=0x7f0d0073;
+        public static final int btnClearRecords=0x7f0d0074;
+        public static final int btn_browse=0x7f0d006f;
+        public static final int btn_cetak=0x7f0d0070;
         public static final int buttonAdd=0x7f0d0054;
         public static final int buttonCancel=0x7f0d0056;
         public static final int buttonOk=0x7f0d0055;
         public static final int buttonPanel=0x7f0d002b;
-        public static final int cancel_action=0x7f0d0077;
+        public static final int cancel_action=0x7f0d007a;
         public static final int chart=0x7f0d0062;
         public static final int checkbox=0x7f0d0039;
-        public static final int chronometer=0x7f0d007d;
+        public static final int chronometer=0x7f0d0080;
         public static final int collapseActionView=0x7f0d001d;
         public static final int contentPanel=0x7f0d0031;
         public static final int content_frame=0x7f0d005a;
         public static final int custom=0x7f0d0037;
         public static final int customPanel=0x7f0d0036;
-        public static final int data_arus=0x7f0d0069;
-        public static final int data_suhu=0x7f0d006b;
-        public static final int data_tahanan=0x7f0d006a;
-        public static final int data_tegangan=0x7f0d0068;
-        public static final int database_empty=0x7f0d006f;
+        public static final int data_arus=0x7f0d006b;
+        public static final int data_suhu=0x7f0d006d;
+        public static final int data_tahanan=0x7f0d006c;
+        public static final int data_tegangan=0x7f0d006a;
+        public static final int database_empty=0x7f0d0071;
         public static final int decor_content_parent=0x7f0d003f;
         public static final int default_activity_button=0x7f0d0027;
-        public static final int device_item=0x7f0d0072;
-        public static final int device_list=0x7f0d0074;
+        public static final int device_item=0x7f0d0075;
+        public static final int device_list=0x7f0d0077;
         public static final int disableHome=0x7f0d000c;
         public static final int drawer_home_menu_list=0x7f0d005c;
         public static final int drawer_img=0x7f0d005f;
@@ -1725,28 +1726,30 @@ containing a value of this type.
         public static final int drawer_setting_menu_list=0x7f0d005e;
         public static final int edit_query=0x7f0d0043;
         public static final int end=0x7f0d001a;
-        public static final int end_padder=0x7f0d0082;
+        public static final int end_padder=0x7f0d0085;
         public static final int expand_activities_button=0x7f0d0025;
         public static final int expanded_menu=0x7f0d0038;
         public static final int footer=0x7f0d0063;
+        public static final int get_all_records=0x7f0d0066;
+        public static final int get_real_time_data=0x7f0d0065;
         public static final int home=0x7f0d0004;
         public static final int homeAsUp=0x7f0d000d;
         public static final int icon=0x7f0d0029;
         public static final int ifRoom=0x7f0d001e;
         public static final int image=0x7f0d0026;
         public static final int imageViewIcon=0x7f0d0057;
-        public static final int info=0x7f0d0081;
+        public static final int info=0x7f0d0084;
         public static final int left_drawer=0x7f0d005b;
-        public static final int line1=0x7f0d007b;
-        public static final int line3=0x7f0d007f;
+        public static final int line1=0x7f0d007e;
+        public static final int line3=0x7f0d0082;
         public static final int linearLayoutButtons=0x7f0d0053;
         public static final int linearLayoutFiles=0x7f0d0052;
         public static final int listMode=0x7f0d0009;
         public static final int list_item=0x7f0d0028;
-        public static final int log_scroll=0x7f0d0066;
-        public static final int log_text=0x7f0d0067;
-        public static final int main_table=0x7f0d0070;
-        public static final int media_actions=0x7f0d0079;
+        public static final int log_scroll=0x7f0d0068;
+        public static final int log_text=0x7f0d0069;
+        public static final int main_table=0x7f0d0072;
+        public static final int media_actions=0x7f0d007c;
         public static final int middle=0x7f0d001b;
         public static final int multiply=0x7f0d0014;
         public static final int never=0x7f0d001f;
@@ -1783,15 +1786,15 @@ containing a value of this type.
         public static final int src_atop=0x7f0d0016;
         public static final int src_in=0x7f0d0017;
         public static final int src_over=0x7f0d0018;
-        public static final int status_bar_latest_event_content=0x7f0d0078;
+        public static final int status_bar_latest_event_content=0x7f0d007b;
         public static final int submit_area=0x7f0d004c;
         public static final int tabMode=0x7f0d000b;
-        public static final int target_path=0x7f0d006c;
-        public static final int text=0x7f0d0080;
-        public static final int text2=0x7f0d007e;
+        public static final int target_path=0x7f0d006e;
+        public static final int text=0x7f0d0083;
+        public static final int text2=0x7f0d0081;
         public static final int textSpacerNoButtons=0x7f0d0034;
         public static final int textViewLabel=0x7f0d0058;
-        public static final int time=0x7f0d007c;
+        public static final int time=0x7f0d007f;
         public static final int title=0x7f0d002a;
         public static final int title_template=0x7f0d002f;
         public static final int topPanel=0x7f0d002e;
@@ -1927,15 +1930,18 @@ containing a value of this type.
         public static final int daidalos_ok=0x7f060022;
         public static final int daidalos_select=0x7f060023;
         public static final int daidalos_yes=0x7f060024;
-        public static final int drawer_close=0x7f06003c;
-        public static final int drawer_open=0x7f06003d;
-        public static final int empty=0x7f06003e;
-        public static final int empty_database=0x7f06003f;
-        public static final int hello_blank_fragment=0x7f060040;
-        public static final int menu=0x7f060041;
-        public static final int no_bluetooth_device=0x7f060042;
-        public static final int print=0x7f060043;
-        public static final int refresh=0x7f060044;
+        public static final int date=0x7f06003c;
+        public static final int drawer_close=0x7f06003d;
+        public static final int drawer_open=0x7f06003e;
+        public static final int empty=0x7f06003f;
+        public static final int empty_database=0x7f060040;
+        public static final int get_realtime_data=0x7f060041;
+        public static final int hello_blank_fragment=0x7f060042;
+        public static final int menu=0x7f060043;
+        public static final int milliseconds=0x7f060044;
+        public static final int no_bluetooth_device=0x7f060045;
+        public static final int print=0x7f060046;
+        public static final int refresh=0x7f060047;
         public static final int status_bar_notification_info_overflow=0x7f060013;
     }
     public static final class style {
@@ -2266,33 +2272,33 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.swdmnd.sofcapp:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.swdmnd.sofcapp:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.swdmnd.sofcapp:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd com.swdmnd.sofcapp:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft com.swdmnd.sofcapp:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight com.swdmnd.sofcapp:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart com.swdmnd.sofcapp:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.swdmnd.sofcapp:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.swdmnd.sofcapp:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.swdmnd.sofcapp:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_elevation com.swdmnd.sofcapp:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height com.swdmnd.sofcapp:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.swdmnd.sofcapp:hideOnContentScroll}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.swdmnd.sofcapp:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.swdmnd.sofcapp:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.swdmnd.sofcapp:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.swdmnd.sofcapp:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.swdmnd.sofcapp:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.swdmnd.sofcapp:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.swdmnd.sofcapp:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme com.swdmnd.sofcapp:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.swdmnd.sofcapp:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.swdmnd.sofcapp:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.swdmnd.sofcapp:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.swdmnd.sofcapp:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title com.swdmnd.sofcapp:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.swdmnd.sofcapp:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background com.swdmnd.avometer:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.swdmnd.avometer:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.swdmnd.avometer:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd com.swdmnd.avometer:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft com.swdmnd.avometer:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight com.swdmnd.avometer:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart com.swdmnd.avometer:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.swdmnd.avometer:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.swdmnd.avometer:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.swdmnd.avometer:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_elevation com.swdmnd.avometer:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height com.swdmnd.avometer:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.swdmnd.avometer:hideOnContentScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.swdmnd.avometer:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.swdmnd.avometer:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.swdmnd.avometer:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.swdmnd.avometer:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.swdmnd.avometer:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo com.swdmnd.avometer:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.swdmnd.avometer:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme com.swdmnd.avometer:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.swdmnd.avometer:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.swdmnd.avometer:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.swdmnd.avometer:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.swdmnd.avometer:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title com.swdmnd.avometer:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.swdmnd.avometer:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -2332,17 +2338,17 @@ containing a value of this type.
             0x7f01001a, 0x7f01001b, 0x7f010054
         };
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#background}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:background
+          @attr name com.swdmnd.avometer:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2350,11 +2356,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.swdmnd.sofcapp:backgroundSplit
+          @attr name com.swdmnd.avometer:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2362,11 +2368,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.swdmnd.sofcapp:backgroundStacked
+          @attr name com.swdmnd.avometer:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2378,11 +2384,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:contentInsetEnd
+          @attr name com.swdmnd.avometer:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2394,11 +2400,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:contentInsetLeft
+          @attr name com.swdmnd.avometer:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2410,11 +2416,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:contentInsetRight
+          @attr name com.swdmnd.avometer:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2426,21 +2432,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:contentInsetStart
+          @attr name com.swdmnd.avometer:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:customNavigationLayout
+          @attr name com.swdmnd.avometer:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2458,21 +2464,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name com.swdmnd.sofcapp:displayOptions
+          @attr name com.swdmnd.avometer:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:divider
+          @attr name com.swdmnd.avometer:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2484,11 +2490,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:elevation
+          @attr name com.swdmnd.avometer:elevation
         */
         public static final int ActionBar_elevation = 24;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#height}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2500,11 +2506,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:height
+          @attr name com.swdmnd.avometer:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2514,51 +2520,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:hideOnContentScroll
+          @attr name com.swdmnd.avometer:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:homeAsUpIndicator
+          @attr name com.swdmnd.avometer:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 26;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:homeLayout
+          @attr name com.swdmnd.avometer:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#icon}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:icon
+          @attr name com.swdmnd.avometer:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:indeterminateProgressStyle
+          @attr name com.swdmnd.avometer:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2570,21 +2576,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:itemPadding
+          @attr name com.swdmnd.avometer:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:logo
+          @attr name com.swdmnd.avometer:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2598,21 +2604,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.swdmnd.sofcapp:navigationMode
+          @attr name com.swdmnd.avometer:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:popupTheme
+          @attr name com.swdmnd.avometer:popupTheme
         */
         public static final int ActionBar_popupTheme = 25;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2624,21 +2630,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:progressBarPadding
+          @attr name com.swdmnd.avometer:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:progressBarStyle
+          @attr name com.swdmnd.avometer:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2648,21 +2654,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:subtitle
+          @attr name com.swdmnd.avometer:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:subtitleTextStyle
+          @attr name com.swdmnd.avometer:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#title}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2672,17 +2678,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:title
+          @attr name com.swdmnd.avometer:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:titleTextStyle
+          @attr name com.swdmnd.avometer:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -2734,12 +2740,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.swdmnd.sofcapp:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.swdmnd.sofcapp:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout com.swdmnd.sofcapp:closeItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height com.swdmnd.sofcapp:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.swdmnd.sofcapp:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.swdmnd.sofcapp:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background com.swdmnd.avometer:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.swdmnd.avometer:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout com.swdmnd.avometer:closeItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height com.swdmnd.avometer:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.swdmnd.avometer:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.swdmnd.avometer:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -2753,17 +2759,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01000e, 0x7f01001c
         };
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#background}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:background
+          @attr name com.swdmnd.avometer:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2771,21 +2777,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.swdmnd.sofcapp:backgroundSplit
+          @attr name com.swdmnd.avometer:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:closeItemLayout
+          @attr name com.swdmnd.avometer:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#height}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2797,27 +2803,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:height
+          @attr name com.swdmnd.avometer:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:subtitleTextStyle
+          @attr name com.swdmnd.avometer:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:titleTextStyle
+          @attr name com.swdmnd.avometer:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -2826,8 +2832,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.swdmnd.sofcapp:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.swdmnd.sofcapp:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.swdmnd.avometer:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.swdmnd.avometer:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -2836,17 +2842,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01001d, 0x7f01001e
         };
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:expandActivityOverflowButtonDrawable
+          @attr name com.swdmnd.avometer:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -2856,7 +2862,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:initialActivityCount
+          @attr name com.swdmnd.avometer:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AlertDialog.
@@ -2866,11 +2872,11 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.swdmnd.sofcapp:buttonPanelSideLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listItemLayout com.swdmnd.sofcapp:listItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listLayout com.swdmnd.sofcapp:listLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.swdmnd.sofcapp:multiChoiceItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.swdmnd.sofcapp:singleChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.swdmnd.avometer:buttonPanelSideLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listItemLayout com.swdmnd.avometer:listItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listLayout com.swdmnd.avometer:listLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.swdmnd.avometer:multiChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.swdmnd.avometer:singleChoiceItemLayout}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_android_layout
            @see #AlertDialog_buttonPanelSideLayout
@@ -2890,53 +2896,53 @@ containing a value of this type.
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:buttonPanelSideLayout
+          @attr name com.swdmnd.avometer:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:listItemLayout
+          @attr name com.swdmnd.avometer:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:listLayout
+          @attr name com.swdmnd.avometer:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:multiChoiceItemLayout
+          @attr name com.swdmnd.avometer:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:singleChoiceItemLayout
+          @attr name com.swdmnd.avometer:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
         /** Attributes that can be used with a AppCompatImageView.
@@ -2946,7 +2952,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatImageView_android_src android:src}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatImageView_srcCompat com.swdmnd.sofcapp:srcCompat}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatImageView_srcCompat com.swdmnd.avometer:srcCompat}</code></td><td></td></tr>
            </table>
            @see #AppCompatImageView_android_src
            @see #AppCompatImageView_srcCompat
@@ -2961,13 +2967,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatImageView_android_src = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#srcCompat}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#srcCompat}
           attribute's value can be found in the {@link #AppCompatImageView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:srcCompat
+          @attr name com.swdmnd.avometer:srcCompat
         */
         public static final int AppCompatImageView_srcCompat = 1;
         /** Attributes that can be used with a AppCompatTextView.
@@ -2977,7 +2983,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.swdmnd.sofcapp:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.swdmnd.avometer:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #AppCompatTextView_android_textAppearance
            @see #AppCompatTextView_textAllCaps
@@ -2992,14 +2998,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatTextView_android_textAppearance = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textAllCaps}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.swdmnd.sofcapp:textAllCaps
+          @attr name com.swdmnd.avometer:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
         /** Attributes that can be used with a AppCompatTheme.
@@ -3008,118 +3014,118 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.swdmnd.sofcapp:actionBarDivider}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.swdmnd.sofcapp:actionBarItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.swdmnd.sofcapp:actionBarPopupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarSize com.swdmnd.sofcapp:actionBarSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.swdmnd.sofcapp:actionBarSplitStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.swdmnd.sofcapp:actionBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.swdmnd.sofcapp:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.swdmnd.sofcapp:actionBarTabStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.swdmnd.sofcapp:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.swdmnd.sofcapp:actionBarTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.swdmnd.sofcapp:actionBarWidgetTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.swdmnd.sofcapp:actionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.swdmnd.sofcapp:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.swdmnd.sofcapp:actionMenuTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.swdmnd.sofcapp:actionMenuTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.swdmnd.sofcapp:actionModeBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.swdmnd.sofcapp:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.swdmnd.sofcapp:actionModeCloseDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.swdmnd.sofcapp:actionModeCopyDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.swdmnd.sofcapp:actionModeCutDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.swdmnd.sofcapp:actionModeFindDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.swdmnd.sofcapp:actionModePasteDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.swdmnd.sofcapp:actionModePopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.swdmnd.sofcapp:actionModeSelectAllDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.swdmnd.sofcapp:actionModeShareDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.swdmnd.sofcapp:actionModeSplitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.swdmnd.sofcapp:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.swdmnd.sofcapp:actionModeWebSearchDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.swdmnd.sofcapp:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.swdmnd.sofcapp:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.swdmnd.sofcapp:activityChooserViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.swdmnd.sofcapp:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.swdmnd.sofcapp:alertDialogCenterButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.swdmnd.sofcapp:alertDialogStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.swdmnd.sofcapp:alertDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.swdmnd.avometer:actionBarDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.swdmnd.avometer:actionBarItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.swdmnd.avometer:actionBarPopupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarSize com.swdmnd.avometer:actionBarSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.swdmnd.avometer:actionBarSplitStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.swdmnd.avometer:actionBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.swdmnd.avometer:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.swdmnd.avometer:actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.swdmnd.avometer:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.swdmnd.avometer:actionBarTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.swdmnd.avometer:actionBarWidgetTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.swdmnd.avometer:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.swdmnd.avometer:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.swdmnd.avometer:actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.swdmnd.avometer:actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.swdmnd.avometer:actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.swdmnd.avometer:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.swdmnd.avometer:actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.swdmnd.avometer:actionModeCopyDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.swdmnd.avometer:actionModeCutDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.swdmnd.avometer:actionModeFindDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.swdmnd.avometer:actionModePasteDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.swdmnd.avometer:actionModePopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.swdmnd.avometer:actionModeSelectAllDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.swdmnd.avometer:actionModeShareDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.swdmnd.avometer:actionModeSplitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.swdmnd.avometer:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.swdmnd.avometer:actionModeWebSearchDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.swdmnd.avometer:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.swdmnd.avometer:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.swdmnd.avometer:activityChooserViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.swdmnd.avometer:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.swdmnd.avometer:alertDialogCenterButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.swdmnd.avometer:alertDialogStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.swdmnd.avometer:alertDialogTheme}</code></td><td></td></tr>
            <tr><td><code>{@link #AppCompatTheme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #AppCompatTheme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.swdmnd.sofcapp:autoCompleteTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.swdmnd.sofcapp:borderlessButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.swdmnd.sofcapp:buttonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.swdmnd.sofcapp:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.swdmnd.sofcapp:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.swdmnd.sofcapp:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.swdmnd.sofcapp:buttonBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonStyle com.swdmnd.sofcapp:buttonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.swdmnd.sofcapp:buttonStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.swdmnd.sofcapp:checkboxStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.swdmnd.sofcapp:checkedTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorAccent com.swdmnd.sofcapp:colorAccent}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.swdmnd.sofcapp:colorButtonNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.swdmnd.sofcapp:colorControlActivated}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.swdmnd.sofcapp:colorControlHighlight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.swdmnd.sofcapp:colorControlNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorPrimary com.swdmnd.sofcapp:colorPrimary}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.swdmnd.sofcapp:colorPrimaryDark}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.swdmnd.sofcapp:colorSwitchThumbNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_controlBackground com.swdmnd.sofcapp:controlBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.swdmnd.sofcapp:dialogPreferredPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dialogTheme com.swdmnd.sofcapp:dialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.swdmnd.sofcapp:dividerHorizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dividerVertical com.swdmnd.sofcapp:dividerVertical}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.swdmnd.sofcapp:dropDownListViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.swdmnd.sofcapp:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_editTextBackground com.swdmnd.sofcapp:editTextBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_editTextColor com.swdmnd.sofcapp:editTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_editTextStyle com.swdmnd.sofcapp:editTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.swdmnd.sofcapp:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.swdmnd.sofcapp:imageButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.swdmnd.sofcapp:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.swdmnd.sofcapp:listDividerAlertDialog}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.swdmnd.sofcapp:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.swdmnd.sofcapp:listPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.swdmnd.sofcapp:listPreferredItemHeightLarge}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.swdmnd.sofcapp:listPreferredItemHeightSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.swdmnd.sofcapp:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.swdmnd.sofcapp:listPreferredItemPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_panelBackground com.swdmnd.sofcapp:panelBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.swdmnd.sofcapp:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.swdmnd.sofcapp:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.swdmnd.sofcapp:popupMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.swdmnd.sofcapp:popupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.swdmnd.sofcapp:radioButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.swdmnd.sofcapp:ratingBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.swdmnd.sofcapp:ratingBarStyleIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.swdmnd.sofcapp:ratingBarStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.swdmnd.sofcapp:searchViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.swdmnd.sofcapp:seekBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.swdmnd.sofcapp:selectableItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.swdmnd.sofcapp:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.swdmnd.sofcapp:spinnerDropDownItemStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.swdmnd.sofcapp:spinnerStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_switchStyle com.swdmnd.sofcapp:switchStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.swdmnd.sofcapp:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.swdmnd.sofcapp:textAppearanceListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.swdmnd.sofcapp:textAppearanceListItemSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.swdmnd.sofcapp:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.swdmnd.sofcapp:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.swdmnd.sofcapp:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.swdmnd.sofcapp:textColorAlertDialogListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.swdmnd.sofcapp:textColorSearchUrl}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.swdmnd.sofcapp:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.swdmnd.sofcapp:toolbarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowActionBar com.swdmnd.sofcapp:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.swdmnd.sofcapp:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.swdmnd.sofcapp:windowActionModeOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.swdmnd.sofcapp:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.swdmnd.sofcapp:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.swdmnd.sofcapp:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.swdmnd.sofcapp:windowFixedWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.swdmnd.sofcapp:windowMinWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.swdmnd.sofcapp:windowMinWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.swdmnd.sofcapp:windowNoTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.swdmnd.avometer:autoCompleteTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.swdmnd.avometer:borderlessButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.swdmnd.avometer:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.swdmnd.avometer:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.swdmnd.avometer:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.swdmnd.avometer:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.swdmnd.avometer:buttonBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonStyle com.swdmnd.avometer:buttonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.swdmnd.avometer:buttonStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.swdmnd.avometer:checkboxStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.swdmnd.avometer:checkedTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorAccent com.swdmnd.avometer:colorAccent}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.swdmnd.avometer:colorButtonNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.swdmnd.avometer:colorControlActivated}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.swdmnd.avometer:colorControlHighlight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.swdmnd.avometer:colorControlNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorPrimary com.swdmnd.avometer:colorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.swdmnd.avometer:colorPrimaryDark}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.swdmnd.avometer:colorSwitchThumbNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_controlBackground com.swdmnd.avometer:controlBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.swdmnd.avometer:dialogPreferredPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dialogTheme com.swdmnd.avometer:dialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.swdmnd.avometer:dividerHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dividerVertical com.swdmnd.avometer:dividerVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.swdmnd.avometer:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.swdmnd.avometer:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_editTextBackground com.swdmnd.avometer:editTextBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_editTextColor com.swdmnd.avometer:editTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_editTextStyle com.swdmnd.avometer:editTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.swdmnd.avometer:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.swdmnd.avometer:imageButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.swdmnd.avometer:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.swdmnd.avometer:listDividerAlertDialog}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.swdmnd.avometer:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.swdmnd.avometer:listPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.swdmnd.avometer:listPreferredItemHeightLarge}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.swdmnd.avometer:listPreferredItemHeightSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.swdmnd.avometer:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.swdmnd.avometer:listPreferredItemPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_panelBackground com.swdmnd.avometer:panelBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.swdmnd.avometer:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.swdmnd.avometer:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.swdmnd.avometer:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.swdmnd.avometer:popupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.swdmnd.avometer:radioButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.swdmnd.avometer:ratingBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.swdmnd.avometer:ratingBarStyleIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.swdmnd.avometer:ratingBarStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.swdmnd.avometer:searchViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.swdmnd.avometer:seekBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.swdmnd.avometer:selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.swdmnd.avometer:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.swdmnd.avometer:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.swdmnd.avometer:spinnerStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_switchStyle com.swdmnd.avometer:switchStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.swdmnd.avometer:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.swdmnd.avometer:textAppearanceListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.swdmnd.avometer:textAppearanceListItemSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.swdmnd.avometer:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.swdmnd.avometer:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.swdmnd.avometer:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.swdmnd.avometer:textColorAlertDialogListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.swdmnd.avometer:textColorSearchUrl}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.swdmnd.avometer:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.swdmnd.avometer:toolbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowActionBar com.swdmnd.avometer:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.swdmnd.avometer:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.swdmnd.avometer:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.swdmnd.avometer:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.swdmnd.avometer:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.swdmnd.avometer:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.swdmnd.avometer:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.swdmnd.avometer:windowMinWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.swdmnd.avometer:windowMinWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.swdmnd.avometer:windowNoTitle}</code></td><td></td></tr>
            </table>
            @see #AppCompatTheme_actionBarDivider
            @see #AppCompatTheme_actionBarItemBackground
@@ -3265,37 +3271,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010090, 0x7f010091, 0x7f010092, 0x7f010093
         };
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarDivider}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarDivider}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarDivider
+          @attr name com.swdmnd.avometer:actionBarDivider
         */
         public static final int AppCompatTheme_actionBarDivider = 23;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarItemBackground}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarItemBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarItemBackground
+          @attr name com.swdmnd.avometer:actionBarItemBackground
         */
         public static final int AppCompatTheme_actionBarItemBackground = 24;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarPopupTheme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarPopupTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarPopupTheme
+          @attr name com.swdmnd.avometer:actionBarPopupTheme
         */
         public static final int AppCompatTheme_actionBarPopupTheme = 17;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarSize}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarSize}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3315,111 +3321,111 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
-          @attr name com.swdmnd.sofcapp:actionBarSize
+          @attr name com.swdmnd.avometer:actionBarSize
         */
         public static final int AppCompatTheme_actionBarSize = 22;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarSplitStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarSplitStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarSplitStyle
+          @attr name com.swdmnd.avometer:actionBarSplitStyle
         */
         public static final int AppCompatTheme_actionBarSplitStyle = 19;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarStyle
+          @attr name com.swdmnd.avometer:actionBarStyle
         */
         public static final int AppCompatTheme_actionBarStyle = 18;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarTabBarStyle
+          @attr name com.swdmnd.avometer:actionBarTabBarStyle
         */
         public static final int AppCompatTheme_actionBarTabBarStyle = 13;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarTabStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarTabStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarTabStyle
+          @attr name com.swdmnd.avometer:actionBarTabStyle
         */
         public static final int AppCompatTheme_actionBarTabStyle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarTabTextStyle
+          @attr name com.swdmnd.avometer:actionBarTabTextStyle
         */
         public static final int AppCompatTheme_actionBarTabTextStyle = 14;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarTheme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarTheme
+          @attr name com.swdmnd.avometer:actionBarTheme
         */
         public static final int AppCompatTheme_actionBarTheme = 20;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionBarWidgetTheme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionBarWidgetTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionBarWidgetTheme
+          @attr name com.swdmnd.avometer:actionBarWidgetTheme
         */
         public static final int AppCompatTheme_actionBarWidgetTheme = 21;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionButtonStyle
+          @attr name com.swdmnd.avometer:actionButtonStyle
         */
         public static final int AppCompatTheme_actionButtonStyle = 49;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionDropDownStyle
+          @attr name com.swdmnd.avometer:actionDropDownStyle
         */
         public static final int AppCompatTheme_actionDropDownStyle = 45;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionMenuTextAppearance}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionMenuTextAppearance}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionMenuTextAppearance
+          @attr name com.swdmnd.avometer:actionMenuTextAppearance
         */
         public static final int AppCompatTheme_actionMenuTextAppearance = 25;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionMenuTextColor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionMenuTextColor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3427,181 +3433,181 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.swdmnd.sofcapp:actionMenuTextColor
+          @attr name com.swdmnd.avometer:actionMenuTextColor
         */
         public static final int AppCompatTheme_actionMenuTextColor = 26;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeBackground}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeBackground
+          @attr name com.swdmnd.avometer:actionModeBackground
         */
         public static final int AppCompatTheme_actionModeBackground = 29;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeCloseButtonStyle
+          @attr name com.swdmnd.avometer:actionModeCloseButtonStyle
         */
         public static final int AppCompatTheme_actionModeCloseButtonStyle = 28;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeCloseDrawable}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeCloseDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeCloseDrawable
+          @attr name com.swdmnd.avometer:actionModeCloseDrawable
         */
         public static final int AppCompatTheme_actionModeCloseDrawable = 31;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeCopyDrawable}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeCopyDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeCopyDrawable
+          @attr name com.swdmnd.avometer:actionModeCopyDrawable
         */
         public static final int AppCompatTheme_actionModeCopyDrawable = 33;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeCutDrawable}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeCutDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeCutDrawable
+          @attr name com.swdmnd.avometer:actionModeCutDrawable
         */
         public static final int AppCompatTheme_actionModeCutDrawable = 32;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeFindDrawable}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeFindDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeFindDrawable
+          @attr name com.swdmnd.avometer:actionModeFindDrawable
         */
         public static final int AppCompatTheme_actionModeFindDrawable = 37;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModePasteDrawable}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModePasteDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModePasteDrawable
+          @attr name com.swdmnd.avometer:actionModePasteDrawable
         */
         public static final int AppCompatTheme_actionModePasteDrawable = 34;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModePopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModePopupWindowStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModePopupWindowStyle
+          @attr name com.swdmnd.avometer:actionModePopupWindowStyle
         */
         public static final int AppCompatTheme_actionModePopupWindowStyle = 39;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeSelectAllDrawable}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeSelectAllDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeSelectAllDrawable
+          @attr name com.swdmnd.avometer:actionModeSelectAllDrawable
         */
         public static final int AppCompatTheme_actionModeSelectAllDrawable = 35;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeShareDrawable}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeShareDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeShareDrawable
+          @attr name com.swdmnd.avometer:actionModeShareDrawable
         */
         public static final int AppCompatTheme_actionModeShareDrawable = 36;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeSplitBackground}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeSplitBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeSplitBackground
+          @attr name com.swdmnd.avometer:actionModeSplitBackground
         */
         public static final int AppCompatTheme_actionModeSplitBackground = 30;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeStyle
+          @attr name com.swdmnd.avometer:actionModeStyle
         */
         public static final int AppCompatTheme_actionModeStyle = 27;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionModeWebSearchDrawable}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionModeWebSearchDrawable}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionModeWebSearchDrawable
+          @attr name com.swdmnd.avometer:actionModeWebSearchDrawable
         */
         public static final int AppCompatTheme_actionModeWebSearchDrawable = 38;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionOverflowButtonStyle
+          @attr name com.swdmnd.avometer:actionOverflowButtonStyle
         */
         public static final int AppCompatTheme_actionOverflowButtonStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionOverflowMenuStyle
+          @attr name com.swdmnd.avometer:actionOverflowMenuStyle
         */
         public static final int AppCompatTheme_actionOverflowMenuStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#activityChooserViewStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#activityChooserViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:activityChooserViewStyle
+          @attr name com.swdmnd.avometer:activityChooserViewStyle
         */
         public static final int AppCompatTheme_activityChooserViewStyle = 57;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#alertDialogButtonGroupStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#alertDialogButtonGroupStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:alertDialogButtonGroupStyle
+          @attr name com.swdmnd.avometer:alertDialogButtonGroupStyle
         */
         public static final int AppCompatTheme_alertDialogButtonGroupStyle = 92;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#alertDialogCenterButtons}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#alertDialogCenterButtons}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3611,27 +3617,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:alertDialogCenterButtons
+          @attr name com.swdmnd.avometer:alertDialogCenterButtons
         */
         public static final int AppCompatTheme_alertDialogCenterButtons = 93;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#alertDialogStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#alertDialogStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:alertDialogStyle
+          @attr name com.swdmnd.avometer:alertDialogStyle
         */
         public static final int AppCompatTheme_alertDialogStyle = 91;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#alertDialogTheme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#alertDialogTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:alertDialogTheme
+          @attr name com.swdmnd.avometer:alertDialogTheme
         */
         public static final int AppCompatTheme_alertDialogTheme = 94;
         /**
@@ -3647,117 +3653,117 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatTheme_android_windowIsFloating = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#autoCompleteTextViewStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#autoCompleteTextViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:autoCompleteTextViewStyle
+          @attr name com.swdmnd.avometer:autoCompleteTextViewStyle
         */
         public static final int AppCompatTheme_autoCompleteTextViewStyle = 99;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#borderlessButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#borderlessButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:borderlessButtonStyle
+          @attr name com.swdmnd.avometer:borderlessButtonStyle
         */
         public static final int AppCompatTheme_borderlessButtonStyle = 54;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonBarButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonBarButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:buttonBarButtonStyle
+          @attr name com.swdmnd.avometer:buttonBarButtonStyle
         */
         public static final int AppCompatTheme_buttonBarButtonStyle = 51;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonBarNegativeButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonBarNegativeButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:buttonBarNegativeButtonStyle
+          @attr name com.swdmnd.avometer:buttonBarNegativeButtonStyle
         */
         public static final int AppCompatTheme_buttonBarNegativeButtonStyle = 97;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonBarNeutralButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonBarNeutralButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:buttonBarNeutralButtonStyle
+          @attr name com.swdmnd.avometer:buttonBarNeutralButtonStyle
         */
         public static final int AppCompatTheme_buttonBarNeutralButtonStyle = 98;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonBarPositiveButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonBarPositiveButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:buttonBarPositiveButtonStyle
+          @attr name com.swdmnd.avometer:buttonBarPositiveButtonStyle
         */
         public static final int AppCompatTheme_buttonBarPositiveButtonStyle = 96;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonBarStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:buttonBarStyle
+          @attr name com.swdmnd.avometer:buttonBarStyle
         */
         public static final int AppCompatTheme_buttonBarStyle = 50;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:buttonStyle
+          @attr name com.swdmnd.avometer:buttonStyle
         */
         public static final int AppCompatTheme_buttonStyle = 100;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonStyleSmall}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonStyleSmall}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:buttonStyleSmall
+          @attr name com.swdmnd.avometer:buttonStyleSmall
         */
         public static final int AppCompatTheme_buttonStyleSmall = 101;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#checkboxStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#checkboxStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:checkboxStyle
+          @attr name com.swdmnd.avometer:checkboxStyle
         */
         public static final int AppCompatTheme_checkboxStyle = 102;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#checkedTextViewStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#checkedTextViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:checkedTextViewStyle
+          @attr name com.swdmnd.avometer:checkedTextViewStyle
         */
         public static final int AppCompatTheme_checkedTextViewStyle = 103;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#colorAccent}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#colorAccent}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3768,11 +3774,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:colorAccent
+          @attr name com.swdmnd.avometer:colorAccent
         */
         public static final int AppCompatTheme_colorAccent = 84;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#colorButtonNormal}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#colorButtonNormal}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3783,11 +3789,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:colorButtonNormal
+          @attr name com.swdmnd.avometer:colorButtonNormal
         */
         public static final int AppCompatTheme_colorButtonNormal = 88;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#colorControlActivated}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#colorControlActivated}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3798,11 +3804,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:colorControlActivated
+          @attr name com.swdmnd.avometer:colorControlActivated
         */
         public static final int AppCompatTheme_colorControlActivated = 86;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#colorControlHighlight}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#colorControlHighlight}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3813,11 +3819,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:colorControlHighlight
+          @attr name com.swdmnd.avometer:colorControlHighlight
         */
         public static final int AppCompatTheme_colorControlHighlight = 87;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#colorControlNormal}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#colorControlNormal}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3828,11 +3834,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:colorControlNormal
+          @attr name com.swdmnd.avometer:colorControlNormal
         */
         public static final int AppCompatTheme_colorControlNormal = 85;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#colorPrimary}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#colorPrimary}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3843,11 +3849,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:colorPrimary
+          @attr name com.swdmnd.avometer:colorPrimary
         */
         public static final int AppCompatTheme_colorPrimary = 82;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#colorPrimaryDark}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#colorPrimaryDark}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3858,11 +3864,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:colorPrimaryDark
+          @attr name com.swdmnd.avometer:colorPrimaryDark
         */
         public static final int AppCompatTheme_colorPrimaryDark = 83;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#colorSwitchThumbNormal}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#colorSwitchThumbNormal}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3873,21 +3879,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:colorSwitchThumbNormal
+          @attr name com.swdmnd.avometer:colorSwitchThumbNormal
         */
         public static final int AppCompatTheme_colorSwitchThumbNormal = 89;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#controlBackground}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#controlBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:controlBackground
+          @attr name com.swdmnd.avometer:controlBackground
         */
         public static final int AppCompatTheme_controlBackground = 90;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#dialogPreferredPadding}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#dialogPreferredPadding}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3899,51 +3905,51 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:dialogPreferredPadding
+          @attr name com.swdmnd.avometer:dialogPreferredPadding
         */
         public static final int AppCompatTheme_dialogPreferredPadding = 43;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#dialogTheme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#dialogTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:dialogTheme
+          @attr name com.swdmnd.avometer:dialogTheme
         */
         public static final int AppCompatTheme_dialogTheme = 42;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#dividerHorizontal}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#dividerHorizontal}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:dividerHorizontal
+          @attr name com.swdmnd.avometer:dividerHorizontal
         */
         public static final int AppCompatTheme_dividerHorizontal = 56;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#dividerVertical}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#dividerVertical}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:dividerVertical
+          @attr name com.swdmnd.avometer:dividerVertical
         */
         public static final int AppCompatTheme_dividerVertical = 55;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#dropDownListViewStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#dropDownListViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:dropDownListViewStyle
+          @attr name com.swdmnd.avometer:dropDownListViewStyle
         */
         public static final int AppCompatTheme_dropDownListViewStyle = 74;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3955,21 +3961,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:dropdownListPreferredItemHeight
+          @attr name com.swdmnd.avometer:dropdownListPreferredItemHeight
         */
         public static final int AppCompatTheme_dropdownListPreferredItemHeight = 46;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#editTextBackground}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#editTextBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:editTextBackground
+          @attr name com.swdmnd.avometer:editTextBackground
         */
         public static final int AppCompatTheme_editTextBackground = 63;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#editTextColor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#editTextColor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -3977,71 +3983,71 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.swdmnd.sofcapp:editTextColor
+          @attr name com.swdmnd.avometer:editTextColor
         */
         public static final int AppCompatTheme_editTextColor = 62;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#editTextStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#editTextStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:editTextStyle
+          @attr name com.swdmnd.avometer:editTextStyle
         */
         public static final int AppCompatTheme_editTextStyle = 104;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:homeAsUpIndicator
+          @attr name com.swdmnd.avometer:homeAsUpIndicator
         */
         public static final int AppCompatTheme_homeAsUpIndicator = 48;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#imageButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#imageButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:imageButtonStyle
+          @attr name com.swdmnd.avometer:imageButtonStyle
         */
         public static final int AppCompatTheme_imageButtonStyle = 64;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:listChoiceBackgroundIndicator
+          @attr name com.swdmnd.avometer:listChoiceBackgroundIndicator
         */
         public static final int AppCompatTheme_listChoiceBackgroundIndicator = 81;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listDividerAlertDialog}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listDividerAlertDialog}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:listDividerAlertDialog
+          @attr name com.swdmnd.avometer:listDividerAlertDialog
         */
         public static final int AppCompatTheme_listDividerAlertDialog = 44;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:listPopupWindowStyle
+          @attr name com.swdmnd.avometer:listPopupWindowStyle
         */
         public static final int AppCompatTheme_listPopupWindowStyle = 75;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listPreferredItemHeight}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4053,11 +4059,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:listPreferredItemHeight
+          @attr name com.swdmnd.avometer:listPreferredItemHeight
         */
         public static final int AppCompatTheme_listPreferredItemHeight = 69;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listPreferredItemHeightLarge}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listPreferredItemHeightLarge}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4069,11 +4075,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:listPreferredItemHeightLarge
+          @attr name com.swdmnd.avometer:listPreferredItemHeightLarge
         */
         public static final int AppCompatTheme_listPreferredItemHeightLarge = 71;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listPreferredItemHeightSmall}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listPreferredItemHeightSmall}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4085,11 +4091,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:listPreferredItemHeightSmall
+          @attr name com.swdmnd.avometer:listPreferredItemHeightSmall
         */
         public static final int AppCompatTheme_listPreferredItemHeightSmall = 70;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listPreferredItemPaddingLeft}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listPreferredItemPaddingLeft}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4101,11 +4107,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:listPreferredItemPaddingLeft
+          @attr name com.swdmnd.avometer:listPreferredItemPaddingLeft
         */
         public static final int AppCompatTheme_listPreferredItemPaddingLeft = 72;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#listPreferredItemPaddingRight}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#listPreferredItemPaddingRight}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4117,31 +4123,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:listPreferredItemPaddingRight
+          @attr name com.swdmnd.avometer:listPreferredItemPaddingRight
         */
         public static final int AppCompatTheme_listPreferredItemPaddingRight = 73;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#panelBackground}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#panelBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:panelBackground
+          @attr name com.swdmnd.avometer:panelBackground
         */
         public static final int AppCompatTheme_panelBackground = 78;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:panelMenuListTheme
+          @attr name com.swdmnd.avometer:panelMenuListTheme
         */
         public static final int AppCompatTheme_panelMenuListTheme = 80;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4153,201 +4159,201 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:panelMenuListWidth
+          @attr name com.swdmnd.avometer:panelMenuListWidth
         */
         public static final int AppCompatTheme_panelMenuListWidth = 79;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:popupMenuStyle
+          @attr name com.swdmnd.avometer:popupMenuStyle
         */
         public static final int AppCompatTheme_popupMenuStyle = 60;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#popupWindowStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#popupWindowStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:popupWindowStyle
+          @attr name com.swdmnd.avometer:popupWindowStyle
         */
         public static final int AppCompatTheme_popupWindowStyle = 61;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#radioButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#radioButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:radioButtonStyle
+          @attr name com.swdmnd.avometer:radioButtonStyle
         */
         public static final int AppCompatTheme_radioButtonStyle = 105;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#ratingBarStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#ratingBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:ratingBarStyle
+          @attr name com.swdmnd.avometer:ratingBarStyle
         */
         public static final int AppCompatTheme_ratingBarStyle = 106;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#ratingBarStyleIndicator}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#ratingBarStyleIndicator}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:ratingBarStyleIndicator
+          @attr name com.swdmnd.avometer:ratingBarStyleIndicator
         */
         public static final int AppCompatTheme_ratingBarStyleIndicator = 107;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#ratingBarStyleSmall}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#ratingBarStyleSmall}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:ratingBarStyleSmall
+          @attr name com.swdmnd.avometer:ratingBarStyleSmall
         */
         public static final int AppCompatTheme_ratingBarStyleSmall = 108;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#searchViewStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#searchViewStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:searchViewStyle
+          @attr name com.swdmnd.avometer:searchViewStyle
         */
         public static final int AppCompatTheme_searchViewStyle = 68;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#seekBarStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#seekBarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:seekBarStyle
+          @attr name com.swdmnd.avometer:seekBarStyle
         */
         public static final int AppCompatTheme_seekBarStyle = 109;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#selectableItemBackground}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#selectableItemBackground}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:selectableItemBackground
+          @attr name com.swdmnd.avometer:selectableItemBackground
         */
         public static final int AppCompatTheme_selectableItemBackground = 52;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#selectableItemBackgroundBorderless}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#selectableItemBackgroundBorderless}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:selectableItemBackgroundBorderless
+          @attr name com.swdmnd.avometer:selectableItemBackgroundBorderless
         */
         public static final int AppCompatTheme_selectableItemBackgroundBorderless = 53;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#spinnerDropDownItemStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#spinnerDropDownItemStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:spinnerDropDownItemStyle
+          @attr name com.swdmnd.avometer:spinnerDropDownItemStyle
         */
         public static final int AppCompatTheme_spinnerDropDownItemStyle = 47;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#spinnerStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#spinnerStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:spinnerStyle
+          @attr name com.swdmnd.avometer:spinnerStyle
         */
         public static final int AppCompatTheme_spinnerStyle = 110;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#switchStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#switchStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:switchStyle
+          @attr name com.swdmnd.avometer:switchStyle
         */
         public static final int AppCompatTheme_switchStyle = 111;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textAppearanceLargePopupMenu}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textAppearanceLargePopupMenu}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:textAppearanceLargePopupMenu
+          @attr name com.swdmnd.avometer:textAppearanceLargePopupMenu
         */
         public static final int AppCompatTheme_textAppearanceLargePopupMenu = 40;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textAppearanceListItem}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textAppearanceListItem}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:textAppearanceListItem
+          @attr name com.swdmnd.avometer:textAppearanceListItem
         */
         public static final int AppCompatTheme_textAppearanceListItem = 76;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textAppearanceListItemSmall}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textAppearanceListItemSmall}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:textAppearanceListItemSmall
+          @attr name com.swdmnd.avometer:textAppearanceListItemSmall
         */
         public static final int AppCompatTheme_textAppearanceListItemSmall = 77;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textAppearanceSearchResultSubtitle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textAppearanceSearchResultSubtitle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:textAppearanceSearchResultSubtitle
+          @attr name com.swdmnd.avometer:textAppearanceSearchResultSubtitle
         */
         public static final int AppCompatTheme_textAppearanceSearchResultSubtitle = 66;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textAppearanceSearchResultTitle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textAppearanceSearchResultTitle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:textAppearanceSearchResultTitle
+          @attr name com.swdmnd.avometer:textAppearanceSearchResultTitle
         */
         public static final int AppCompatTheme_textAppearanceSearchResultTitle = 65;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textAppearanceSmallPopupMenu}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textAppearanceSmallPopupMenu}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:textAppearanceSmallPopupMenu
+          @attr name com.swdmnd.avometer:textAppearanceSmallPopupMenu
         */
         public static final int AppCompatTheme_textAppearanceSmallPopupMenu = 41;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textColorAlertDialogListItem}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textColorAlertDialogListItem}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4355,11 +4361,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.swdmnd.sofcapp:textColorAlertDialogListItem
+          @attr name com.swdmnd.avometer:textColorAlertDialogListItem
         */
         public static final int AppCompatTheme_textColorAlertDialogListItem = 95;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textColorSearchUrl}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textColorSearchUrl}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4367,31 +4373,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.swdmnd.sofcapp:textColorSearchUrl
+          @attr name com.swdmnd.avometer:textColorSearchUrl
         */
         public static final int AppCompatTheme_textColorSearchUrl = 67;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#toolbarNavigationButtonStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#toolbarNavigationButtonStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:toolbarNavigationButtonStyle
+          @attr name com.swdmnd.avometer:toolbarNavigationButtonStyle
         */
         public static final int AppCompatTheme_toolbarNavigationButtonStyle = 59;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#toolbarStyle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#toolbarStyle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:toolbarStyle
+          @attr name com.swdmnd.avometer:toolbarStyle
         */
         public static final int AppCompatTheme_toolbarStyle = 58;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowActionBar}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4401,11 +4407,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowActionBar
+          @attr name com.swdmnd.avometer:windowActionBar
         */
         public static final int AppCompatTheme_windowActionBar = 2;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4415,11 +4421,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowActionBarOverlay
+          @attr name com.swdmnd.avometer:windowActionBarOverlay
         */
         public static final int AppCompatTheme_windowActionBarOverlay = 4;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowActionModeOverlay}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowActionModeOverlay}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4429,11 +4435,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowActionModeOverlay
+          @attr name com.swdmnd.avometer:windowActionModeOverlay
         */
         public static final int AppCompatTheme_windowActionModeOverlay = 5;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4448,11 +4454,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowFixedHeightMajor
+          @attr name com.swdmnd.avometer:windowFixedHeightMajor
         */
         public static final int AppCompatTheme_windowFixedHeightMajor = 9;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4467,11 +4473,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowFixedHeightMinor
+          @attr name com.swdmnd.avometer:windowFixedHeightMinor
         */
         public static final int AppCompatTheme_windowFixedHeightMinor = 7;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4486,11 +4492,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowFixedWidthMajor
+          @attr name com.swdmnd.avometer:windowFixedWidthMajor
         */
         public static final int AppCompatTheme_windowFixedWidthMajor = 6;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4505,11 +4511,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowFixedWidthMinor
+          @attr name com.swdmnd.avometer:windowFixedWidthMinor
         */
         public static final int AppCompatTheme_windowFixedWidthMinor = 8;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowMinWidthMajor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowMinWidthMajor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4524,11 +4530,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowMinWidthMajor
+          @attr name com.swdmnd.avometer:windowMinWidthMajor
         */
         public static final int AppCompatTheme_windowMinWidthMajor = 10;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowMinWidthMinor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowMinWidthMinor}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4543,11 +4549,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowMinWidthMinor
+          @attr name com.swdmnd.avometer:windowMinWidthMinor
         */
         public static final int AppCompatTheme_windowMinWidthMinor = 11;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#windowNoTitle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#windowNoTitle}
           attribute's value can be found in the {@link #AppCompatTheme} array.
 
 
@@ -4557,7 +4563,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:windowNoTitle
+          @attr name com.swdmnd.avometer:windowNoTitle
         */
         public static final int AppCompatTheme_windowNoTitle = 3;
         /** Attributes that can be used with a ButtonBarLayout.
@@ -4566,7 +4572,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ButtonBarLayout_allowStacking com.swdmnd.sofcapp:allowStacking}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarLayout_allowStacking com.swdmnd.avometer:allowStacking}</code></td><td></td></tr>
            </table>
            @see #ButtonBarLayout_allowStacking
          */
@@ -4574,7 +4580,7 @@ containing a value of this type.
             0x7f010094
         };
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#allowStacking}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#allowStacking}
           attribute's value can be found in the {@link #ButtonBarLayout} array.
 
 
@@ -4584,7 +4590,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:allowStacking
+          @attr name com.swdmnd.avometer:allowStacking
         */
         public static final int ButtonBarLayout_allowStacking = 0;
         /** Attributes that can be used with a CompoundButton.
@@ -4594,8 +4600,8 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTint com.swdmnd.sofcapp:buttonTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTintMode com.swdmnd.sofcapp:buttonTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTint com.swdmnd.avometer:buttonTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTintMode com.swdmnd.avometer:buttonTintMode}</code></td><td></td></tr>
            </table>
            @see #CompoundButton_android_button
            @see #CompoundButton_buttonTint
@@ -4611,7 +4617,7 @@ containing a value of this type.
         */
         public static final int CompoundButton_android_button = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonTint}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonTint}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -4622,11 +4628,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:buttonTint
+          @attr name com.swdmnd.avometer:buttonTint
         */
         public static final int CompoundButton_buttonTint = 1;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#buttonTintMode}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#buttonTintMode}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -4642,7 +4648,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.swdmnd.sofcapp:buttonTintMode
+          @attr name com.swdmnd.avometer:buttonTintMode
         */
         public static final int CompoundButton_buttonTintMode = 2;
         /** Attributes that can be used with a DrawerArrowToggle.
@@ -4651,14 +4657,14 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.swdmnd.sofcapp:arrowHeadLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.swdmnd.sofcapp:arrowShaftLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barLength com.swdmnd.sofcapp:barLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color com.swdmnd.sofcapp:color}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.swdmnd.sofcapp:drawableSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.swdmnd.sofcapp:gapBetweenBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.swdmnd.sofcapp:spinBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness com.swdmnd.sofcapp:thickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.swdmnd.avometer:arrowHeadLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.swdmnd.avometer:arrowShaftLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barLength com.swdmnd.avometer:barLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color com.swdmnd.avometer:color}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.swdmnd.avometer:drawableSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.swdmnd.avometer:gapBetweenBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.swdmnd.avometer:spinBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness com.swdmnd.avometer:thickness}</code></td><td></td></tr>
            </table>
            @see #DrawerArrowToggle_arrowHeadLength
            @see #DrawerArrowToggle_arrowShaftLength
@@ -4674,7 +4680,7 @@ containing a value of this type.
             0x7f01009b, 0x7f01009c, 0x7f01009d, 0x7f01009e
         };
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#arrowHeadLength}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#arrowHeadLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4686,11 +4692,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:arrowHeadLength
+          @attr name com.swdmnd.avometer:arrowHeadLength
         */
         public static final int DrawerArrowToggle_arrowHeadLength = 4;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#arrowShaftLength}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#arrowShaftLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4702,11 +4708,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:arrowShaftLength
+          @attr name com.swdmnd.avometer:arrowShaftLength
         */
         public static final int DrawerArrowToggle_arrowShaftLength = 5;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#barLength}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#barLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4718,11 +4724,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:barLength
+          @attr name com.swdmnd.avometer:barLength
         */
         public static final int DrawerArrowToggle_barLength = 6;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#color}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4733,11 +4739,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:color
+          @attr name com.swdmnd.avometer:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4749,11 +4755,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:drawableSize
+          @attr name com.swdmnd.avometer:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4765,11 +4771,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:gapBetweenBars
+          @attr name com.swdmnd.avometer:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4779,11 +4785,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:spinBars
+          @attr name com.swdmnd.avometer:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#thickness}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -4795,7 +4801,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:thickness
+          @attr name com.swdmnd.avometer:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -4809,10 +4815,10 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider com.swdmnd.sofcapp:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.swdmnd.sofcapp:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.swdmnd.sofcapp:measureWithLargestChild}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.swdmnd.sofcapp:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_divider com.swdmnd.avometer:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.swdmnd.avometer:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.swdmnd.avometer:measureWithLargestChild}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.swdmnd.avometer:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -4860,17 +4866,17 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:divider
+          @attr name com.swdmnd.avometer:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -4882,11 +4888,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:dividerPadding
+          @attr name com.swdmnd.avometer:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -4896,11 +4902,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:measureWithLargestChild
+          @attr name com.swdmnd.avometer:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -4915,7 +4921,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.swdmnd.sofcapp:showDividers
+          @attr name com.swdmnd.avometer:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -5054,9 +5060,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.swdmnd.sofcapp:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.swdmnd.sofcapp:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.swdmnd.sofcapp:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout com.swdmnd.avometer:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.swdmnd.avometer:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass com.swdmnd.avometer:actionViewClass}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -5070,7 +5076,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.swdmnd.sofcapp:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.swdmnd.avometer:showAsAction}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -5098,17 +5104,17 @@ containing a value of this type.
             0x7f0100a5
         };
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:actionLayout
+          @attr name com.swdmnd.avometer:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -5118,11 +5124,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:actionProviderClass
+          @attr name com.swdmnd.avometer:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -5132,7 +5138,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:actionViewClass
+          @attr name com.swdmnd.avometer:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -5214,7 +5220,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -5230,7 +5236,7 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name com.swdmnd.sofcapp:showAsAction
+          @attr name com.swdmnd.avometer:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -5246,7 +5252,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing com.swdmnd.sofcapp:preserveIconSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing com.swdmnd.avometer:preserveIconSpacing}</code></td><td></td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -5304,7 +5310,7 @@ containing a value of this type.
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -5314,7 +5320,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:preserveIconSpacing
+          @attr name com.swdmnd.avometer:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /** Attributes that can be used with a PopupWindow.
@@ -5324,7 +5330,7 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor com.swdmnd.sofcapp:overlapAnchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor com.swdmnd.avometer:overlapAnchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindow_android_popupBackground
            @see #PopupWindow_overlapAnchor
@@ -5339,7 +5345,7 @@ containing a value of this type.
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -5349,7 +5355,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:overlapAnchor
+          @attr name com.swdmnd.avometer:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 1;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -5358,7 +5364,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.swdmnd.sofcapp:state_above_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.swdmnd.avometer:state_above_anchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
@@ -5366,7 +5372,7 @@ containing a value of this type.
             0x7f0100a8
         };
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -5376,7 +5382,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:state_above_anchor
+          @attr name com.swdmnd.avometer:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a SearchView.
@@ -5389,19 +5395,19 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon com.swdmnd.sofcapp:closeIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon com.swdmnd.sofcapp:commitIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_defaultQueryHint com.swdmnd.sofcapp:defaultQueryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_goIcon com.swdmnd.sofcapp:goIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.swdmnd.sofcapp:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout com.swdmnd.sofcapp:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground com.swdmnd.sofcapp:queryBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.swdmnd.sofcapp:queryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchHintIcon com.swdmnd.sofcapp:searchHintIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon com.swdmnd.sofcapp:searchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground com.swdmnd.sofcapp:submitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout com.swdmnd.sofcapp:suggestionRowLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon com.swdmnd.sofcapp:voiceIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_closeIcon com.swdmnd.avometer:closeIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon com.swdmnd.avometer:commitIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_defaultQueryHint com.swdmnd.avometer:defaultQueryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_goIcon com.swdmnd.avometer:goIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.swdmnd.avometer:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout com.swdmnd.avometer:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground com.swdmnd.avometer:queryBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.swdmnd.avometer:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchHintIcon com.swdmnd.avometer:searchHintIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon com.swdmnd.avometer:searchIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground com.swdmnd.avometer:submitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout com.swdmnd.avometer:suggestionRowLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon com.swdmnd.avometer:voiceIcon}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -5453,27 +5459,27 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:closeIcon
+          @attr name com.swdmnd.avometer:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:commitIcon
+          @attr name com.swdmnd.avometer:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#defaultQueryHint}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#defaultQueryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -5483,21 +5489,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:defaultQueryHint
+          @attr name com.swdmnd.avometer:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:goIcon
+          @attr name com.swdmnd.avometer:goIcon
         */
         public static final int SearchView_goIcon = 9;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -5507,31 +5513,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:iconifiedByDefault
+          @attr name com.swdmnd.avometer:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#layout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:layout
+          @attr name com.swdmnd.avometer:layout
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:queryBackground
+          @attr name com.swdmnd.avometer:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -5541,57 +5547,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:queryHint
+          @attr name com.swdmnd.avometer:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#searchHintIcon}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#searchHintIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:searchHintIcon
+          @attr name com.swdmnd.avometer:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:searchIcon
+          @attr name com.swdmnd.avometer:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:submitBackground
+          @attr name com.swdmnd.avometer:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:suggestionRowLayout
+          @attr name com.swdmnd.avometer:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:voiceIcon
+          @attr name com.swdmnd.avometer:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
         /** Attributes that can be used with a Spinner.
@@ -5604,7 +5610,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #Spinner_android_entries android:entries}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupTheme com.swdmnd.sofcapp:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupTheme com.swdmnd.avometer:popupTheme}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_dropDownWidth
            @see #Spinner_android_entries
@@ -5641,13 +5647,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Spinner_android_prompt = 2;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#popupTheme}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:popupTheme
+          @attr name com.swdmnd.avometer:popupTheme
         */
         public static final int Spinner_popupTheme = 4;
         /** Attributes that can be used with a SwitchCompat.
@@ -5659,13 +5665,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText com.swdmnd.sofcapp:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack com.swdmnd.sofcapp:splitTrack}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.swdmnd.sofcapp:switchMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding com.swdmnd.sofcapp:switchPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.swdmnd.sofcapp:switchTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.swdmnd.sofcapp:thumbTextPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_track com.swdmnd.sofcapp:track}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText com.swdmnd.avometer:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack com.swdmnd.avometer:splitTrack}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.swdmnd.avometer:switchMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding com.swdmnd.avometer:switchPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.swdmnd.avometer:switchTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.swdmnd.avometer:thumbTextPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_track com.swdmnd.avometer:track}</code></td><td></td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -5702,7 +5708,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#showText}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5712,11 +5718,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:showText
+          @attr name com.swdmnd.avometer:showText
         */
         public static final int SwitchCompat_showText = 9;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5726,11 +5732,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:splitTrack
+          @attr name com.swdmnd.avometer:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5742,11 +5748,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:switchMinWidth
+          @attr name com.swdmnd.avometer:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5758,21 +5764,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:switchPadding
+          @attr name com.swdmnd.avometer:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:switchTextAppearance
+          @attr name com.swdmnd.avometer:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -5784,17 +5790,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:thumbTextPadding
+          @attr name com.swdmnd.avometer:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#track}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:track
+          @attr name com.swdmnd.avometer:track
         */
         public static final int SwitchCompat_track = 3;
         /** Attributes that can be used with a TextAppearance.
@@ -5811,7 +5817,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_textAllCaps com.swdmnd.sofcapp:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextAppearance_textAllCaps com.swdmnd.avometer:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #TextAppearance_android_shadowColor
            @see #TextAppearance_android_shadowDx
@@ -5877,14 +5883,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int TextAppearance_android_typeface = 1;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#textAllCaps}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.swdmnd.sofcapp:textAllCaps
+          @attr name com.swdmnd.avometer:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 8;
         /** Attributes that can be used with a Toolbar.
@@ -5895,29 +5901,29 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription com.swdmnd.sofcapp:collapseContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon com.swdmnd.sofcapp:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd com.swdmnd.sofcapp:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft com.swdmnd.sofcapp:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight com.swdmnd.sofcapp:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart com.swdmnd.sofcapp:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logo com.swdmnd.sofcapp:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logoDescription com.swdmnd.sofcapp:logoDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight com.swdmnd.sofcapp:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription com.swdmnd.sofcapp:navigationContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon com.swdmnd.sofcapp:navigationIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme com.swdmnd.sofcapp:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle com.swdmnd.sofcapp:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.swdmnd.sofcapp:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextColor com.swdmnd.sofcapp:subtitleTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title com.swdmnd.sofcapp:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom com.swdmnd.sofcapp:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd com.swdmnd.sofcapp:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart com.swdmnd.sofcapp:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop com.swdmnd.sofcapp:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins com.swdmnd.sofcapp:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance com.swdmnd.sofcapp:titleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextColor com.swdmnd.sofcapp:titleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription com.swdmnd.avometer:collapseContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon com.swdmnd.avometer:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd com.swdmnd.avometer:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft com.swdmnd.avometer:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight com.swdmnd.avometer:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart com.swdmnd.avometer:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logo com.swdmnd.avometer:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logoDescription com.swdmnd.avometer:logoDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight com.swdmnd.avometer:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription com.swdmnd.avometer:navigationContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationIcon com.swdmnd.avometer:navigationIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_popupTheme com.swdmnd.avometer:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle com.swdmnd.avometer:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.swdmnd.avometer:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextColor com.swdmnd.avometer:subtitleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title com.swdmnd.avometer:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom com.swdmnd.avometer:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd com.swdmnd.avometer:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart com.swdmnd.avometer:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop com.swdmnd.avometer:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins com.swdmnd.avometer:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance com.swdmnd.avometer:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextColor com.swdmnd.avometer:titleTextColor}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -5967,7 +5973,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5977,21 +5983,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:collapseContentDescription
+          @attr name com.swdmnd.avometer:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 19;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:collapseIcon
+          @attr name com.swdmnd.avometer:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 18;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6003,11 +6009,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:contentInsetEnd
+          @attr name com.swdmnd.avometer:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 6;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6019,11 +6025,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:contentInsetLeft
+          @attr name com.swdmnd.avometer:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 7;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6035,11 +6041,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:contentInsetRight
+          @attr name com.swdmnd.avometer:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 8;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6051,21 +6057,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:contentInsetStart
+          @attr name com.swdmnd.avometer:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 5;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#logo}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:logo
+          @attr name com.swdmnd.avometer:logo
         */
         public static final int Toolbar_logo = 4;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#logoDescription}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#logoDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6075,11 +6081,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:logoDescription
+          @attr name com.swdmnd.avometer:logoDescription
         */
         public static final int Toolbar_logoDescription = 22;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6091,11 +6097,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:maxButtonHeight
+          @attr name com.swdmnd.avometer:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 17;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6105,31 +6111,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:navigationContentDescription
+          @attr name com.swdmnd.avometer:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 21;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:navigationIcon
+          @attr name com.swdmnd.avometer:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 20;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:popupTheme
+          @attr name com.swdmnd.avometer:popupTheme
         */
         public static final int Toolbar_popupTheme = 9;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6139,21 +6145,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:subtitle
+          @attr name com.swdmnd.avometer:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:subtitleTextAppearance
+          @attr name com.swdmnd.avometer:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 11;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#subtitleTextColor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#subtitleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6164,11 +6170,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:subtitleTextColor
+          @attr name com.swdmnd.avometer:subtitleTextColor
         */
         public static final int Toolbar_subtitleTextColor = 24;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#title}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6178,11 +6184,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:title
+          @attr name com.swdmnd.avometer:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6194,11 +6200,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:titleMarginBottom
+          @attr name com.swdmnd.avometer:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 16;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6210,11 +6216,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:titleMarginEnd
+          @attr name com.swdmnd.avometer:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 14;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6226,11 +6232,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:titleMarginStart
+          @attr name com.swdmnd.avometer:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 13;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6242,11 +6248,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:titleMarginTop
+          @attr name com.swdmnd.avometer:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 15;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6258,21 +6264,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:titleMargins
+          @attr name com.swdmnd.avometer:titleMargins
         */
         public static final int Toolbar_titleMargins = 12;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:titleTextAppearance
+          @attr name com.swdmnd.avometer:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 10;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#titleTextColor}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#titleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6283,7 +6289,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:titleTextColor
+          @attr name com.swdmnd.avometer:titleTextColor
         */
         public static final int Toolbar_titleTextColor = 23;
         /** Attributes that can be used with a View.
@@ -6294,9 +6300,9 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
            <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.swdmnd.sofcapp:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart com.swdmnd.sofcapp:paddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_theme com.swdmnd.sofcapp:theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.swdmnd.avometer:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart com.swdmnd.avometer:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_theme com.swdmnd.avometer:theme}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_android_theme
@@ -6321,7 +6327,7 @@ containing a value of this type.
         */
         public static final int View_android_theme = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6333,11 +6339,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:paddingEnd
+          @attr name com.swdmnd.avometer:paddingEnd
         */
         public static final int View_paddingEnd = 3;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6349,17 +6355,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:paddingStart
+          @attr name com.swdmnd.avometer:paddingStart
         */
         public static final int View_paddingStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#theme}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.swdmnd.sofcapp:theme
+          @attr name com.swdmnd.avometer:theme
         */
         public static final int View_theme = 4;
         /** Attributes that can be used with a ViewBackgroundHelper.
@@ -6369,8 +6375,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.swdmnd.sofcapp:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.swdmnd.sofcapp:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.swdmnd.avometer:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.swdmnd.avometer:backgroundTintMode}</code></td><td></td></tr>
            </table>
            @see #ViewBackgroundHelper_android_background
            @see #ViewBackgroundHelper_backgroundTint
@@ -6386,7 +6392,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ViewBackgroundHelper_android_background = 0;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#backgroundTint}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -6397,11 +6403,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.swdmnd.sofcapp:backgroundTint
+          @attr name com.swdmnd.avometer:backgroundTint
         */
         public static final int ViewBackgroundHelper_backgroundTint = 1;
         /**
-          <p>This symbol is the offset where the {@link com.swdmnd.sofcapp.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link com.swdmnd.avometer.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -6417,7 +6423,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.swdmnd.sofcapp:backgroundTintMode
+          @attr name com.swdmnd.avometer:backgroundTintMode
         */
         public static final int ViewBackgroundHelper_backgroundTintMode = 2;
         /** Attributes that can be used with a ViewStubCompat.

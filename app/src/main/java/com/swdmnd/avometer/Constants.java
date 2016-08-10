@@ -1,4 +1,6 @@
-package com.swdmnd.sofcapp;
+package com.swdmnd.avometer;
+
+import java.util.Locale;
 
 /**
  * Created by Arief on 9/3/2015.
@@ -29,5 +31,11 @@ public class Constants {
 
     public static final int KEY_BLUETOOTH_ICON = 101;
 
+    public static final long MINIMUM_REALTIME_INTERVAL = 100;
+    public static final byte[] ASK_REALTIME_DATA = "1".getBytes();
+    public static final byte[] ASK_ALL_RECORDS = "2".getBytes();
+
     public static final String STATUS_ARGS_STRING = "status_args_string";
+
+    public static Locale APP_LOCALE = new Locale("id");
 }

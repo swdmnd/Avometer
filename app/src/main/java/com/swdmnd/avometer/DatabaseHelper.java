@@ -1,4 +1,4 @@
-package com.swdmnd.sofcapp;
+package com.swdmnd.avometer;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -16,7 +16,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Logcat tag
-    //private static final String TAG = "com.swdmnd.sofcapp.DatabaseHelper";
+    //private static final String TAG = "com.swdmnd.avometer.DatabaseHelper";
 
     // Database Version
     private static final int DATABASE_VERSION = 5;
@@ -65,6 +65,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
+    public void refreshDatabase(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(db);
+        db.close();
+    }
+
     public List<String> listDates(){
         List<String> dateList = new ArrayList<>();
         String selectQuery = "SELECT DISTINCT " + COL_DATE + " FROM " + TABLE_NAME + " ORDER BY DATE(" + COL_DATE + ") ASC";
@@ -83,7 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         c.close();
-
+        db.close();
         return dateList;
     }
 
@@ -110,10 +117,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (c.moveToNext());
         } else {
             c.close();
+            db.close();
             return null;
         }
 
         c.close();
+        db.close();
         return dailyRecords;
     }
 
@@ -131,6 +140,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // insert data
         db.insert(TABLE_NAME, null, values);
+        db.close();
     }
 
     public int getLastId(){
@@ -149,6 +159,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         c.close();
+        db.close();
         return lastId;
     }
 }

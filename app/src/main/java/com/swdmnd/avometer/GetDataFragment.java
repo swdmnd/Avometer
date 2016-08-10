@@ -1,4 +1,4 @@
-package com.swdmnd.sofcapp;
+package com.swdmnd.avometer;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -25,7 +25,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 /**
@@ -64,7 +66,11 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
     TextView tahanantv;
     TextView suhutv;
 
+    Timer timer;
+
     Resources res;
+
+    DatabaseHelper databaseHelper;
 
     public interface GetDataListener {
         public void changeBluetoothIcon(int id);
@@ -91,13 +97,35 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
             switch(msg.what){
                 case Constants.MESSAGE_READ:
                     String readMessage = (String) msg.obj;
-                    String[] tokens = readMessage.split("\\s+");
+                    String[] tokens = readMessage.split(",");
                     dataTokens = tokens;
                     if(tokens.length == 4){
                         tegangantv.setText("Tegangan : "+tokens[0]);
                         arustv.setText("Arus : " + tokens[1]);
                         tahanantv.setText("Tahanan : " + tokens[2]);
                         suhutv.setText("Suhu : " + tokens[3]);
+                    } else if(tokens.length == 6){
+                        double[] datas = new double[4];
+                        for(int i = 0; i < 4; ++i){
+                            try{
+                                datas[i] = Double.parseDouble(tokens[i+2]);
+                            } catch (Exception e){
+                                datas[i] = -99.9;
+                            }
+                        }
+                        DataRecord dataRecord = new DataRecord(
+                                databaseHelper.getLastId()+1,
+                                tokens[0],
+                                tokens[1],
+                                datas[0],
+                                datas[1],
+                                datas[3],
+                                datas[2]
+                        );
+                        databaseHelper.recordData(dataRecord);
+                        btService.write(Constants.ASK_ALL_RECORDS);
+                    } else if (tokens.length == 5){
+                        btService.write(Constants.ASK_ALL_RECORDS);
                     }
 
                     updateLog(readMessage, Constants.LOG_OTHERS);
@@ -205,6 +233,7 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
         filter = new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECTED);
         parentActivity.registerReceiver(mReceiver, filter);
         res = getResources();
+        databaseHelper = new DatabaseHelper(getActivity());
     }
 
     @Override
@@ -226,10 +255,43 @@ public class GetDataFragment extends Fragment implements BluetoothSearchDialog.B
             }
         });
 
+        CheckBox getRealTimeData = (CheckBox) view.findViewById(R.id.get_real_time_data);
+        getRealTimeData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (((CheckBox)view).isChecked()){
+                    timer = new Timer();
+                    timer.scheduleAtFixedRate(new TimerTask() {
+
+                        @Override
+                        public void run() {
+                            if(btService.connected){
+                                btService.write(Constants.ASK_REALTIME_DATA);
+                            }
+                        }
+
+                    }, 0, Constants.MINIMUM_REALTIME_INTERVAL);
+                } else {
+                    timer.cancel();
+                }
+            }
+        });
+
         tegangantv = (TextView) view.findViewById(R.id.data_tegangan);
         arustv = (TextView) view.findViewById(R.id.data_arus);
         tahanantv = (TextView) view.findViewById(R.id.data_tahanan);
         suhutv = (TextView) view.findViewById(R.id.data_suhu);
+
+        Button getRecords = (Button) view.findViewById(R.id.get_all_records);
+        getRecords.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(btService.connected){
+                    databaseHelper.refreshDatabase();
+                    btService.write(Constants.ASK_ALL_RECORDS);
+                }
+            }
+        });
 
         view.findViewById(R.id.root_view).setPadding(0, statusBarHeight, 0, 0);
 

@@ -1,4 +1,4 @@
-package com.swdmnd.sofcapp;
+package com.swdmnd.avometer;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -130,8 +130,16 @@ public class BluetoothSearchDialog extends DialogFragment {
 
             @Override
             public void onClick(View v){
-                mBluetoothAdapter.cancelDiscovery();
-                mBluetoothAdapter.startDiscovery();
+                if (mBluetoothAdapter == null){
+                    Toast.makeText(parentActivity, getResources().getString(R.string.no_bluetooth_device), Toast.LENGTH_SHORT).show();
+                    dismiss();
+                } else if (!mBluetoothAdapter.isEnabled()){
+                    Intent enableBluetoothIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                    startActivityForResult(enableBluetoothIntent, Constants.REQUEST_ENABLE_BT);
+                } else {
+                    mBluetoothAdapter.cancelDiscovery();
+                    mBluetoothAdapter.startDiscovery();
+                }
 
                 mDeviceList = new ArrayList<>();
                 mDeviceListAdapter = new ArrayAdapter<>(getTargetFragment().getActivity(), R.layout.list, mDeviceList);

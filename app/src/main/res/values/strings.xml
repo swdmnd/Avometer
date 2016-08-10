@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SOFCApp</string>
+    <string name="app_name">Avometer</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -13,7 +13,9 @@
     <string name="choose_device">Pilih perangkat</string>
     <string name="refresh">Refresh</string>
     <string name="about_us">Tentang kami</string>
-    <string name="about_us_desc">Aplikasi untuk mengambil data dari alat pengukur Solid Oxide Fuel Cell</string>
+    <string name="about_us_desc">Aplikasi untuk mengambil data dari alat pengukur Solid Oxide Fuel Cell.\n\nIcon diambil dari Material Icon - Google Design (https://design.google.com/icons/index.html).</string>
+    <string name="milliseconds">ms</string>
+    <string name="get_realtime_data">Data real time</string>
 
     <string name="bluetooth_connecting">Menghubungkan bluetooth ke %1$s (%2$s)</string>
     <string name="bluetooth_connected">Bluetooth terhubung ke %1$s (%2$s)</string>
@@ -37,8 +39,10 @@
     <string name="action_filter_data">Atur filter data</string>
     <string name="action_get_data">Ambil data</string>
 
+    <string name="date">%1$s %2$s %3$s</string>
+
     <string-array name="drawer_home_menus">
-        <item>SOFC App</item>
+        <item>Avometer</item>
     </string-array>
 
     <array name="drawer_home_icons">

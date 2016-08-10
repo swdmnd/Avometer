@@ -1,4 +1,4 @@
-package com.swdmnd.sofcapp;
+package com.swdmnd.avometer;
 
 import android.app.Activity;
 import android.content.Context;
@@ -24,9 +24,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements GetDataFragment.GetDataListener{
 

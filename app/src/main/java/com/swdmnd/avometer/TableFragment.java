@@ -1,13 +1,13 @@
-package com.swdmnd.sofcapp;
+package com.swdmnd.avometer;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,8 +17,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
+import java.text.DateFormatSymbols;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -100,6 +99,15 @@ public class TableFragment extends Fragment {
             }
         });
 
+        Button clearRecord = (Button) fragmentLayout.findViewById(R.id.btnClearRecords);
+        clearRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseHelper.refreshDatabase();
+                new LoadTableData().execute();
+            }
+        });
+
         fragmentLayout.findViewById(R.id.root_view).setPadding(0, statusBarHeight, 0, 0);
 
         noDataIndicator = (TextView) fragmentLayout.findViewById(R.id.database_empty);
@@ -165,10 +173,17 @@ public class TableFragment extends Fragment {
             tableRowPosition = TABLE_HEADER_ROW;
 
             noDataIndicator.setVisibility(View.VISIBLE);
+            final AsyncTask<String,Object, Object> mTask = this;
 
             pDialog = new ProgressDialog(getActivity());
             pDialog.setMessage("Sedang memuat...");
-            pDialog.setCancelable(false);
+            pDialog.setCancelable(true);
+            pDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                @Override
+                public void onCancel(DialogInterface dialogInterface) {
+                    mTask.cancel(true);
+                }
+            });
             pDialog.setCanceledOnTouchOutside(false);
             pDialog.show();
         }
@@ -201,14 +216,18 @@ public class TableFragment extends Fragment {
                     break;
 
                 case TABLE_DATE_ROW:
+                    String arg = (String) args[0];
+                    String mYear = arg.substring(0, 4);
+                    String mMonth = new DateFormatSymbols(Constants.APP_LOCALE).getMonths()[Integer.parseInt(arg.substring(5, 7))-1];
+                    String mDate = arg.substring(8);
                     tableCell = new TextView(getActivity());
                     tableCell.setBackgroundResource(R.drawable.table_date_cell);
                     tableCell.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
                     tableCell.setGravity(Gravity.CENTER);
-                    tableCell.setTypeface(null, Typeface.BOLD);
                     tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
                     tableCell.setPadding(4,4,4,4);
-                    tableCell.setText((String) args[0]);
+                    tableCell.setTypeface(null, Typeface.BOLD_ITALIC);
+                    tableCell.setText(String.format(getResources().getString(R.string.date),mDate, mMonth, mYear));
 
                     tableRow.addView(tableCell, index);
                     tableLayout.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
@@ -237,9 +256,10 @@ public class TableFragment extends Fragment {
                             tableCell.setGravity(Gravity.CENTER);
                             tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
                             tableCell.setPadding(4,4,4,4);
+                            if(index==0) tableCell.setTypeface(null, Typeface.BOLD);
                             tableCell.setText(cellText);
 
-                            tableRow.addView(tableCell, index);
+                            tableRow.addView(tableCell, index++);
                         }
 
                         tableLayout.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
@@ -300,8 +320,8 @@ public class TableFragment extends Fragment {
     public void addRecord(){
         DataRecord dataRecord = new DataRecord(
                 databaseHelper.getLastId()+1,
-                "2016-11-12",
-                "23:00",
+                "2016-01-25",
+                "12:00",
                 25.33,
                 35.22,
                 26.11,

@@ -1,4 +1,4 @@
-package com.swdmnd.sofcapp;
+package com.swdmnd.avometer;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;

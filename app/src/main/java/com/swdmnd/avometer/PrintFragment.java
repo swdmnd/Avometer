@@ -1,14 +1,12 @@
-package com.swdmnd.sofcapp;
+package com.swdmnd.avometer;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,10 +29,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.text.DateFormat;
 import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 import ar.com.daidalos.afiledialog.FileChooserDialog;
 
@@ -219,7 +219,7 @@ public class PrintFragment extends Fragment {
                     title.setAlignment(Element.ALIGN_CENTER);
                     document.add(title);
 
-                    title = new Paragraph("Dibuat pada " + new Date(), new Font(Font.FontFamily.HELVETICA, 14, Font.BOLD));
+                    title = new Paragraph("Dibuat pada " + DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.LONG, Constants.APP_LOCALE).format(new Date()), new Font(Font.FontFamily.HELVETICA, 14, Font.BOLD));
                     title.setAlignment(Element.ALIGN_CENTER);
                     title.add(new Paragraph(" "));
                     title.add(new Paragraph(" "));
@@ -232,9 +232,9 @@ public class PrintFragment extends Fragment {
                     dateLists = databaseHelper.listDates();
                     for (String logDate : dateLists) {
                         String mYear = logDate.substring(0, 4);
-                        String mMonth = new DateFormatSymbols().getMonths()[Integer.parseInt(logDate.substring(5, 7))-1];
+                        String mMonth = new DateFormatSymbols(new Locale("id")).getMonths()[Integer.parseInt(logDate.substring(5, 7))-1];
                         String mDate = logDate.substring(8);
-                        Paragraph p = new Paragraph("Tanggal : " + mDate + " " + mMonth + " " + mYear, new Font(Font.FontFamily.HELVETICA, 12, Font.BOLDITALIC));
+                        Paragraph p = new Paragraph("Tanggal : " + String.format(getResources().getString(R.string.date),mDate, mMonth, mYear), new Font(Font.FontFamily.HELVETICA, 12, Font.BOLDITALIC));
                         p.add(new Paragraph(" ", new Font(Font.FontFamily.HELVETICA, 4)));
                         document.add(p);
 
@@ -254,7 +254,7 @@ public class PrintFragment extends Fragment {
                         PdfPCell cell;
                         tableDatas[0] = "Waktu";
                         tableDatas[1] = "Tegangan (V)";
-                        tableDatas[2] = "Arus (A)";
+                        tableDatas[2] = "Arus (mA)";
                         tableDatas[3] = "Suhu (C)";
                         tableDatas[4] = "Resistansi";
 
