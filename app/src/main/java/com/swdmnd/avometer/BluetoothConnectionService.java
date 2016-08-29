@@ -20,7 +20,7 @@ import java.util.UUID;
 public class BluetoothConnectionService {
     BluetoothAdapter mBluetoothAdapter = null;
     private final Handler mHandler;
-    private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");
     BluetoothSocket mBluetoothSocket = null;
     boolean connected = false;
     ConnectThread mConnectThread = null;

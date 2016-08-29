@@ -27,14 +27,24 @@ import java.util.ArrayList;
 public class BluetoothSearchDialog extends DialogFragment {
 
     private ArrayList<String> mDeviceList;
-    private String btDeviceAddress = "30:14:12:08:09:32";
+    private String btDeviceAddress = "";
     private String btDeviceName = "";
     private ArrayAdapter<String> mDeviceListAdapter;
-    BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    BluetoothAdapter mBluetoothAdapter = null;
     ListView listView;
 
     public interface BluetoothSearchDialogListener{
         void onReturnValue(String deviceName, String deviceAddress);
+    }
+
+    public BluetoothSearchDialog(){
+
+    }
+
+    public static BluetoothSearchDialog newInstance(BluetoothAdapter bluetoothAdapter){
+        BluetoothSearchDialog mBluetoothSearchDialog = new BluetoothSearchDialog();
+        mBluetoothSearchDialog.mBluetoothAdapter = bluetoothAdapter;
+        return mBluetoothSearchDialog;
     }
 
     BluetoothSearchDialogListener mCallBack;

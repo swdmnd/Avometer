@@ -31,6 +31,9 @@ public class Constants {
 
     public static final int KEY_BLUETOOTH_ICON = 101;
 
+    public static final int PERMISSION_COARSE_LOCATION = 200;
+    public static final int PERMISSION_FINE_LOCATION = 201;
+
     public static final long MINIMUM_REALTIME_INTERVAL = 100;
     public static final byte[] ASK_REALTIME_DATA = "1".getBytes();
     public static final byte[] ASK_ALL_RECORDS = "2".getBytes();
