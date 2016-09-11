@@ -7,6 +7,48 @@
     android:id="@+id/root_view"
     android:padding="8dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:drawableLeft="@drawable/ic_chevron_left_black_24dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/buttonYesterday"/>
+
+        <TextSwitcher
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/buttonSetDate"
+            android:text="Placeholder tanggal"
+            style="@style/Widget.AppCompat.Button.Borderless">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical" />
+
+        </TextSwitcher>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/buttonTomorrow"/>
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +60,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/tableScrollView">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -29,19 +72,7 @@
                 android:id="@+id/main_table"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
             </TableLayout>
-
-            <Button
-                android:id="@+id/btnAddRecord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add Record"/>
-            <Button
-                android:id="@+id/btnClearRecords"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Clear Records"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

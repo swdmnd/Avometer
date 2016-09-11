@@ -1,5 +1,7 @@
 package com.swdmnd.avometer;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -7,18 +9,32 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextSwitcher;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.text.DateFormat;
 import java.text.DateFormatSymbols;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 
@@ -30,7 +46,7 @@ import java.util.List;
  * Use the {@link TableFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TableFragment extends Fragment {
+public class TableFragment extends Fragment implements DatePickerFragment.CallbackListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -47,8 +63,24 @@ public class TableFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     View fragmentLayout;
     TextView noDataIndicator;
+    TextSwitcher setDate;
+
+    int currentDate = 0;
+    int currentMonth = 0;
+    int currentYear = 0;
+    String mYear;
+    String mMonth;
+    String mDate;
+
+    Animation inLeft;
+    Animation outRight;
+    Animation inRight;
+    Animation outLeft;
 
     int statusBarHeight = 0;
+
+    int tableViewIndex = 0;
+    ViewGroup parentViewGroup;
 
     /**
      * Use this factory method to create a new instance of
@@ -68,6 +100,15 @@ public class TableFragment extends Fragment {
         return fragment;
     }
 
+    public void onReturnValue(int year, int month, int date){
+        mYear = String.valueOf(currentYear=year);
+        mMonth = new DateFormatSymbols(Constants.APP_LOCALE).getMonths()[currentMonth=month];
+        mDate = String.valueOf(currentDate=date);
+        setDate.setText(String.format(getResources().getString(R.string.date),mDate, mMonth, mYear));
+
+        new LoadTableData().execute();
+    }
+
     public TableFragment() {
         // Required empty public constructor
     }
@@ -82,7 +123,29 @@ public class TableFragment extends Fragment {
         }
 
         databaseHelper = new DatabaseHelper(getActivity());
+    }
 
+    private void shiftDate(int operand){
+        Calendar c = Calendar.getInstance();
+        c.set(currentYear,currentMonth,currentDate);
+        c.add(Calendar.DAY_OF_MONTH, operand);
+        if(operand>0){
+            setDate.setInAnimation(inRight);
+            setDate.setOutAnimation(outLeft);
+        } else {
+            setDate.setInAnimation(inLeft);
+            setDate.setOutAnimation(outRight);
+        }
+        currentMonth = c.get(Calendar.MONTH);
+        currentDate = c.get(Calendar.DAY_OF_MONTH);
+        currentYear = c.get(Calendar.YEAR);
+
+        mYear = String.valueOf(currentYear);
+        mMonth = new DateFormatSymbols(Constants.APP_LOCALE).getMonths()[currentMonth];
+        mDate = String.valueOf(currentDate);
+        setDate.setText(String.format(getResources().getString(R.string.date),mDate, mMonth, mYear));
+
+        new LoadTableData().execute();
     }
 
     @Override
@@ -91,30 +154,88 @@ public class TableFragment extends Fragment {
         // Inflate the layout for this fragment
         fragmentLayout = inflater.inflate(R.layout.fragment_table, container, false);
 
-        Button addRecordButton = (Button) fragmentLayout.findViewById(R.id.btnAddRecord);
-        addRecordButton.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addRecord();
-            }
-        });
-
-        Button clearRecord = (Button) fragmentLayout.findViewById(R.id.btnClearRecords);
+        /*Button clearRecord = (Button) fragmentLayout.findViewById(R.id.btnClearRecords);
         clearRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 databaseHelper.refreshDatabase();
                 new LoadTableData().execute();
             }
-        });
+        });*/
+
+        final Calendar c = Calendar.getInstance();
+
+        mYear = String.valueOf(currentYear = c.get(Calendar.YEAR));
+        mMonth = new DateFormatSymbols(Constants.APP_LOCALE).getMonths()[currentMonth = c.get(Calendar.MONTH)];
+        mDate = String.valueOf(currentDate = c.get(Calendar.DAY_OF_MONTH));
 
         fragmentLayout.findViewById(R.id.root_view).setPadding(0, statusBarHeight, 0, 0);
 
         noDataIndicator = (TextView) fragmentLayout.findViewById(R.id.database_empty);
 
+        fragmentLayout.findViewById(R.id.buttonTomorrow).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shiftDate(1);
+            }
+        });
+
+        fragmentLayout.findViewById(R.id.buttonYesterday).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shiftDate(-1);
+            }
+        });
+
+        // Declare the in and out animations and initialize them
+        inLeft = AnimationUtils.loadAnimation(getActivity(),android.R.anim.slide_in_left);
+        outRight = AnimationUtils.loadAnimation(getActivity(),android.R.anim.slide_out_right);
+        inRight = AnimationUtils.loadAnimation(getActivity(),R.anim.slide_in_right);
+        outLeft = AnimationUtils.loadAnimation(getActivity(),R.anim.slide_out_left);
+
+        setDate = (TextSwitcher) fragmentLayout.findViewById(R.id.buttonSetDate);
+
+        setDate.setInAnimation(inLeft);
+        setDate.setOutAnimation(outRight);
+
+        setDate.setText(String.format(getResources().getString(R.string.date),mDate, mMonth, mYear));
+        setDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDatePicker();
+            }
+        });
+
+        fragmentLayout.findViewById(R.id.tableScrollView).setOnTouchListener(new OnSwipeTouchListener(this.getActivity()) {
+            @Override
+            public void onSwipeLeft() {
+                shiftDate(1);
+            }
+
+            @Override
+            public void onSwipeRight(){
+                shiftDate(-1);
+            }
+        });
+
+        View tableView = fragmentLayout.findViewById(R.id.main_table);
+        parentViewGroup = (ViewGroup) tableView.getParent();
+        tableViewIndex = parentViewGroup.indexOfChild(tableView);
+
         new LoadTableData().execute();
 
         return fragmentLayout;
+    }
+
+    public void showDatePicker(){
+        DatePickerFragment datePicker = new DatePickerFragment();
+        Bundle args = new Bundle();
+        args.putInt("date", currentDate);
+        args.putInt("year", currentYear);
+        args.putInt("month", currentMonth);
+        datePicker.setArguments(args);
+        datePicker.setTargetFragment(this,1);
+        datePicker.show(getFragmentManager().beginTransaction(), null);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -185,7 +306,21 @@ public class TableFragment extends Fragment {
                 }
             });
             pDialog.setCanceledOnTouchOutside(false);
-            pDialog.show();
+
+            DecimalFormat formatter = new DecimalFormat("00");
+            String date = currentYear + "-" + formatter.format(currentMonth+1) + "-" + formatter.format(currentDate);
+            dailyRecords =  databaseHelper.getDailyRecord(date);
+            if(dailyRecords == null) {
+                cancel(true);
+                try{
+                    View tableView = fragmentLayout.findViewById(R.id.main_table);
+                    ViewGroup parent = (ViewGroup) tableView.getParent();
+                    parent.removeView(tableView);
+                } catch(Exception e){
+
+                }
+            }
+            else pDialog.show();
         }
 
         @Override
@@ -272,6 +407,7 @@ public class TableFragment extends Fragment {
 
         @Override
         protected Object doInBackground(String... args){
+            if(isCancelled()) return null;
             dateLists = databaseHelper.listDates();
             if (dateLists!=null){
                 backgroundProcessStatus = WAITING_UI_THREAD;
@@ -279,56 +415,58 @@ public class TableFragment extends Fragment {
                 while(backgroundProcessStatus == WAITING_UI_THREAD){
                     if(isCancelled()) return null;
                 }
-                
-                for (String date : dateLists){
-                    tableRowPosition = TABLE_DATE_ROW;
-                    backgroundProcessStatus = WAITING_UI_THREAD;
-                    publishProgress(date);
-                    while(backgroundProcessStatus == WAITING_UI_THREAD){
-                        if(isCancelled()) return null;
-                    }
 
-                    dailyRecords =  databaseHelper.getDailyRecord(date);
-                    tableRowPosition = TABLE_DATA_ROW;
-                    backgroundProcessStatus = WAITING_UI_THREAD;
-                    publishProgress(dailyRecords);
-                    while(backgroundProcessStatus == WAITING_UI_THREAD){
-                        if(isCancelled()) return null;
-                    }
+                //DecimalFormat formatter = new DecimalFormat("00");
+                //String date = currentYear + "-" + formatter.format(currentMonth+1) + "-" + formatter.format(currentDate);
+                //dailyRecords =  databaseHelper.getDailyRecord(date);
+                /*
+                tableRowPosition = TABLE_DATE_ROW;
+                backgroundProcessStatus = WAITING_UI_THREAD;
+                publishProgress(date);
+                while(backgroundProcessStatus == WAITING_UI_THREAD){
+                    if(isCancelled()) return null;
                 }
+                */
+                //dailyRecords =  databaseHelper.getDailyRecord(date);
+                //if(dailyRecords == null) return null;
+                tableRowPosition = TABLE_DATA_ROW;
+                backgroundProcessStatus = WAITING_UI_THREAD;
+                publishProgress(dailyRecords);
+                while(backgroundProcessStatus == WAITING_UI_THREAD){
+                    if(isCancelled()) return null;
+                }
+
             } else {
-                return 1;
+                return null;
             }
-            return null;
+            return 0;
         }
 
         @Override
         protected void onPostExecute(Object arg){
-            if(arg == null){
-                View tableView = fragmentLayout.findViewById(R.id.main_table);
-                ViewGroup parent = (ViewGroup) tableView.getParent();
-                int index = parent.indexOfChild(tableView);
-                parent.removeView(tableView);
-                tableLayout.setId(R.id.main_table);
-                parent.addView(tableLayout, index);
-                noDataIndicator.setVisibility(View.GONE);
+            if(arg != null){
+                try{
+                    View tableView = fragmentLayout.findViewById(R.id.main_table);
+                    ViewGroup parent = (ViewGroup) tableView.getParent();
+                    parent.removeView(tableView);
+                } catch(Exception e){
+
+                }finally {
+                    tableLayout.setId(R.id.main_table);
+                    parentViewGroup.addView(tableLayout, tableViewIndex);
+                    noDataIndicator.setVisibility(View.GONE);
+                }
+            }
+            else {
+                try{
+                    View tableView = fragmentLayout.findViewById(R.id.main_table);
+                    ViewGroup parent = (ViewGroup) tableView.getParent();
+                    parent.removeView(tableView);
+                } catch(Exception e){
+
+                }
             }
             pDialog.dismiss();
         }
-    }
-
-    public void addRecord(){
-        DataRecord dataRecord = new DataRecord(
-                databaseHelper.getLastId()+1,
-                "2016-01-25",
-                "12:00",
-                25.33,
-                35.22,
-                26.11,
-                99.0
-        );
-
-        databaseHelper.recordData(dataRecord);
-        new LoadTableData().execute();
     }
 }
