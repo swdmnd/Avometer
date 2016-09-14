@@ -36,7 +36,7 @@
 
     <string name="action_bluetooth_search">Cari bluetooth</string>
     <string name="action_bluetooth_setting">Pengaturan ambil data</string>
-    <string name="action_filter_data">Atur filter data</string>
+    <string name="action_toggle_view">Tampilkan tabel/grafik</string>
     <string name="action_get_data">Ambil data</string>
 
     <string name="date">%1$s %2$s %3$s</string>

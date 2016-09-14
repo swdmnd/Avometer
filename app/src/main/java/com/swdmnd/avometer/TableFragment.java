@@ -9,6 +9,7 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -21,10 +22,17 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
+
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
 
 import org.w3c.dom.Text;
 
@@ -82,6 +90,28 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
     int tableViewIndex = 0;
     ViewGroup parentViewGroup;
 
+    LineChart lineChart;
+    ArrayList<Entry> values;
+    LineDataSet lineDataSet;
+    ArrayList<String> labels;
+    LineData lineData;
+
+    boolean showTable = true;
+
+    private static int CHART_STATE_VOLTAGE = 0;
+    private static int CHART_STATE_CURRENT = 1;
+    private static int CHART_STATE_TEMPERATURE = 2;
+    private static int CHART_STATE_RESISTANCE = 3;
+
+    int chartState = CHART_STATE_VOLTAGE;
+
+    RadioGroup radioGroup;
+
+    public void toggleView(){
+        showTable = (!showTable);
+        new LoadTableData().execute();
+    }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -125,11 +155,11 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
         databaseHelper = new DatabaseHelper(getActivity());
     }
 
-    private void shiftDate(int operand){
+    private void shiftDate(int offset){
         Calendar c = Calendar.getInstance();
         c.set(currentYear,currentMonth,currentDate);
-        c.add(Calendar.DAY_OF_MONTH, operand);
-        if(operand>0){
+        c.add(Calendar.DAY_OF_MONTH, offset);
+        if(offset>0){
             setDate.setInAnimation(inRight);
             setDate.setOutAnimation(outLeft);
         } else {
@@ -222,6 +252,39 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
         parentViewGroup = (ViewGroup) tableView.getParent();
         tableViewIndex = parentViewGroup.indexOfChild(tableView);
 
+        lineChart = (LineChart) fragmentLayout.findViewById(R.id.chart);
+
+        RadioButton radioButton = (RadioButton) fragmentLayout.findViewById(R.id.radioTegangan);
+        radioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onRadioButtonClicked(view);
+            }
+        });
+        radioButton = (RadioButton) fragmentLayout.findViewById(R.id.radioArus);
+        radioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onRadioButtonClicked(view);
+            }
+        });
+        radioButton = (RadioButton) fragmentLayout.findViewById(R.id.radioSuhu);
+        radioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onRadioButtonClicked(view);
+            }
+        });
+        radioButton = (RadioButton) fragmentLayout.findViewById(R.id.radioTahanan);
+        radioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onRadioButtonClicked(view);
+            }
+        });
+
+        radioGroup = (RadioGroup) fragmentLayout.findViewById(R.id.radio_group);
+
         new LoadTableData().execute();
 
         return fragmentLayout;
@@ -283,6 +346,8 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
         private final int TABLE_DATE_ROW = 3;
         private final int TABLE_DATA_ROW = 4;
 
+        float maxVal=0, minVal=0;
+
         @Override
         protected void onPreExecute(){
             super.onPreExecute();
@@ -312,6 +377,7 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
             dailyRecords =  databaseHelper.getDailyRecord(date);
             if(dailyRecords == null) {
                 cancel(true);
+                lineChart.clear();
                 try{
                     View tableView = fragmentLayout.findViewById(R.id.main_table);
                     ViewGroup parent = (ViewGroup) tableView.getParent();
@@ -338,7 +404,7 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
                         tableCell.setBackgroundResource(R.drawable.table_header_cell);
                         tableCell.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
                         tableCell.setGravity(Gravity.CENTER);
-                        tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
+                        tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_DeviceDefault_Small);
                         tableCell.setPadding(4, 4, 4, 4);
                         tableCell.setTextColor(Color.WHITE);
                         tableCell.setTypeface(null, Typeface.BOLD);
@@ -359,7 +425,7 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
                     tableCell.setBackgroundResource(R.drawable.table_date_cell);
                     tableCell.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
                     tableCell.setGravity(Gravity.CENTER);
-                    tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
+                    tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_DeviceDefault_Small);
                     tableCell.setPadding(4,4,4,4);
                     tableCell.setTypeface(null, Typeface.BOLD_ITALIC);
                     tableCell.setText(String.format(getResources().getString(R.string.date),mDate, mMonth, mYear));
@@ -371,6 +437,9 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
 
                 case TABLE_DATA_ROW:
                     int row_index = 1;
+                    int lineChartIndex = 0;
+                    values = new ArrayList<>();
+                    labels = new ArrayList<>();
                     for (DataRecord dailyRecord : dailyRecords){
                         index = 0;
                         String[] cellTexts = {
@@ -380,6 +449,20 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
                                 Double.toString(dailyRecord.getTemperature()),
                                 Double.toString(dailyRecord.getResistance())
                         };
+                        float tempVal = 0f;
+                        if(chartState == CHART_STATE_VOLTAGE){
+                            tempVal = dailyRecord.getVoltage().floatValue();
+                        } else if (chartState == CHART_STATE_CURRENT){
+                            tempVal = dailyRecord.getCurrent().floatValue();
+                        } else if (chartState == CHART_STATE_TEMPERATURE){
+                            tempVal = dailyRecord.getTemperature().floatValue();
+                        } else if (chartState == CHART_STATE_RESISTANCE){
+                            tempVal = dailyRecord.getResistance().floatValue();
+                        }
+                        if(tempVal > maxVal) maxVal = dailyRecord.getVoltage().floatValue();
+                        if(tempVal < minVal) minVal = dailyRecord.getVoltage().floatValue();
+                        values.add(new Entry(tempVal,lineChartIndex++));
+                        labels.add(dailyRecord.getTime());
                         tableRow = new TableRow(getActivity());
                         tableRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
 
@@ -389,7 +472,7 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
                             else tableCell.setBackgroundResource(R.drawable.table_data_even);
                             tableCell.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1));
                             tableCell.setGravity(Gravity.CENTER);
-                            tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_Small);
+                            tableCell.setTextAppearance(getActivity(), android.R.style.TextAppearance_DeviceDefault_Small);
                             tableCell.setPadding(4,4,4,4);
                             if(index==0) tableCell.setTypeface(null, Typeface.BOLD);
                             tableCell.setText(cellText);
@@ -452,21 +535,70 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
                 } catch(Exception e){
 
                 }finally {
-                    tableLayout.setId(R.id.main_table);
-                    parentViewGroup.addView(tableLayout, tableViewIndex);
+                    if(showTable){
+                        tableLayout.setId(R.id.main_table);
+                        parentViewGroup.addView(tableLayout, tableViewIndex);
+                        tableLayout.setVisibility(View.VISIBLE);
+                        lineChart.setVisibility(View.GONE);
+                        radioGroup.setVisibility(View.GONE);
+                    } else {
+                        if(chartState == CHART_STATE_VOLTAGE){
+                            lineDataSet = new LineDataSet(values, "Tegangan (V)");
+                        } else if (chartState == CHART_STATE_CURRENT){
+                            lineDataSet = new LineDataSet(values, "Arus (mA)");
+                        } else if (chartState == CHART_STATE_TEMPERATURE){
+                            lineDataSet = new LineDataSet(values, "Suhu (C)");
+                        } else if (chartState == CHART_STATE_RESISTANCE){
+                            lineDataSet = new LineDataSet(values, "Tahanan (Ohm)");
+                        }
+                        //lineDataSet.setAxisDependency(YAxis.AxisDependency.LEFT);
+                        lineData = new LineData(labels, lineDataSet);
+
+                        lineChart.setData(lineData);
+                        lineChart.setDescription("Terhadap waktu");
+                        lineChart.setVisibleXRange(minVal, maxVal);
+                        tableLayout.setVisibility(View.GONE);
+                        lineChart.setVisibility(View.VISIBLE);
+                        radioGroup.setVisibility(View.VISIBLE);
+                    }
+
                     noDataIndicator.setVisibility(View.GONE);
                 }
             }
-            else {
-                try{
-                    View tableView = fragmentLayout.findViewById(R.id.main_table);
-                    ViewGroup parent = (ViewGroup) tableView.getParent();
-                    parent.removeView(tableView);
-                } catch(Exception e){
-
-                }
-            }
             pDialog.dismiss();
+
+            lineChart.invalidate();
         }
+    }
+
+    public void onRadioButtonClicked(View v){
+        Boolean checked = ((RadioButton) v).isChecked();
+
+        switch (v.getId()){
+            case R.id.radioTegangan:
+                if(checked){
+                    chartState = CHART_STATE_VOLTAGE;
+                }
+                break;
+
+            case R.id.radioArus:
+                if(checked){
+                    chartState = CHART_STATE_CURRENT;
+                }
+                break;
+
+            case R.id.radioSuhu:
+                if(checked){
+                    chartState = CHART_STATE_TEMPERATURE;
+                }
+                break;
+
+            case R.id.radioTahanan:
+                if(checked){
+                    chartState = CHART_STATE_RESISTANCE;
+                }
+                break;
+        }
+        new LoadTableData().execute();
     }
 }

@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
     private Activity parentActivity;
     private ActionBar actionBar;
 
+    //Fragment shown on main view
+    Fragment fragment;
+
     private int[] assignIconsIds(TypedArray ar){
         int len = ar.length();
         int[] target = new int[len];
@@ -273,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
 
     /** Swaps fragments in the main content view */
     private void selectItem(int position) {
-        Fragment fragment = null;
+        fragment = null;
         switch(drawerCurrentPosition){
             case Constants.DRAWER_POSITION_HOME_MENU:
                 switch(position){
@@ -451,6 +454,11 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
             case R.id.action_get_data:
                 drawerCurrentPosition = Constants.DRAWER_POSITION_MAIN_MENU;
                 selectItem(2);
+                return true;
+
+            case R.id.action_toggle_view:
+                ((TableFragment) fragment).toggleView();
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

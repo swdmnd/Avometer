@@ -205,7 +205,7 @@ public class PrintFragment extends Fragment {
             Date date = new Date() ;
             String timeStamp = new SimpleDateFormat("dd-MM-yyyy_HH:mm").format(date);
 
-            File myFile = new File(targetFolder + "/SOFC_" + timeStamp + ".pdf");
+            File myFile = new File(targetFolder + "/Pengukuran_" + timeStamp + ".pdf");
 
             try{
                 OutputStream output = new FileOutputStream(myFile);

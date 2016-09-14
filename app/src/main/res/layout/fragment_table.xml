@@ -68,6 +68,38 @@
             android:orientation="vertical"
             android:padding="8dp">
 
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radio_group">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tegangan"
+                    android:id="@+id/radioTegangan"
+                    android:checked="true"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arus"
+                    android:id="@+id/radioArus"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Suhu"
+                    android:id="@+id/radioSuhu"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tahanan"
+                    android:id="@+id/radioTahanan"/>
+            </RadioGroup>
+
             <TableLayout
                 android:id="@+id/main_table"
                 android:layout_width="match_parent"

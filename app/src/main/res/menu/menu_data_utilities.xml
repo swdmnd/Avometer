@@ -9,8 +9,8 @@
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/action_filter_data"
+        android:id="@+id/action_toggle_view"
         android:icon="@drawable/ic_filter_list_white_24dp"
-        android:title="@string/action_filter_data"
+        android:title="@string/action_toggle_view"
         app:showAsAction="ifRoom"/>
 </menu>
