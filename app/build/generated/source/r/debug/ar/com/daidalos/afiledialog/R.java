@@ -17,26 +17,26 @@ public final class R {
 		public static final int add = 0x7f02004b;
 		public static final int document = 0x7f02004c;
 		public static final int document_gray = 0x7f02004d;
-		public static final int folder = 0x7f02004e;
-		public static final int folder_gray = 0x7f02004f;
-		public static final int ic_launcher = 0x7f020062;
-		public static final int no = 0x7f02006c;
-		public static final int tick = 0x7f020072;
+		public static final int folder = 0x7f020050;
+		public static final int folder_gray = 0x7f020051;
+		public static final int ic_launcher = 0x7f020065;
+		public static final int no = 0x7f020072;
+		public static final int tick = 0x7f020078;
 	}
 	public static final class id {
-		public static final int buttonAdd = 0x7f0d0054;
-		public static final int buttonCancel = 0x7f0d0056;
-		public static final int buttonOk = 0x7f0d0055;
-		public static final int imageViewIcon = 0x7f0d0057;
-		public static final int linearLayoutButtons = 0x7f0d0053;
-		public static final int linearLayoutFiles = 0x7f0d0052;
-		public static final int rootLayout = 0x7f0d0050;
-		public static final int scrollView1 = 0x7f0d0051;
-		public static final int textViewLabel = 0x7f0d0058;
+		public static final int buttonAdd = 0x7f0d0056;
+		public static final int buttonCancel = 0x7f0d0058;
+		public static final int buttonOk = 0x7f0d0057;
+		public static final int imageViewIcon = 0x7f0d0059;
+		public static final int linearLayoutButtons = 0x7f0d0055;
+		public static final int linearLayoutFiles = 0x7f0d0054;
+		public static final int rootLayout = 0x7f0d0052;
+		public static final int scrollView1 = 0x7f0d0053;
+		public static final int textViewLabel = 0x7f0d005a;
 	}
 	public static final class layout {
-		public static final int daidalos_file_chooser = 0x7f04001a;
-		public static final int daidalos_file_item = 0x7f04001b;
+		public static final int daidalos_file_chooser = 0x7f04001b;
+		public static final int daidalos_file_item = 0x7f04001c;
 	}
 	public static final class string {
 		public static final int daidalos_accept = 0x7f060014;

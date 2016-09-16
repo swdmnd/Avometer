@@ -7,9 +7,9 @@
         android:icon="@drawable/ic_bluetooth_white_24dp"
         android:title="@string/action_bluetooth_search"
         app:showAsAction="ifRoom"/>
-    <item
+    <!--<item
         android:id="@+id/action_bluetooth_setting"
         android:icon="@drawable/ic_settings_white_24dp"
         android:title="@string/action_bluetooth_setting"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"/>-->
 </menu>

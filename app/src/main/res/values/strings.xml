@@ -12,8 +12,8 @@
     <string name="print">Cetak</string>
     <string name="choose_device">Pilih perangkat</string>
     <string name="refresh">Refresh</string>
-    <string name="about_us">Tentang kami</string>
-    <string name="about_us_desc">Aplikasi untuk mengambil data dari alat pengukur Solid Oxide Fuel Cell.\n\nIcon diambil dari Material Icon - Google Design (https://design.google.com/icons/index.html).</string>
+    <string name="about_us">Tentang Aplikasi</string>
+    <string name="about_us_desc">Hot Asi Yohannes Sidabutar\n21060112140039\n\nPerancangan Avometer dan Pengukuran Suhu Berbasis Android</string>
     <string name="milliseconds">ms</string>
     <string name="get_realtime_data">Data real time</string>
 
@@ -46,31 +46,29 @@
     </string-array>
 
     <array name="drawer_home_icons">
-        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/logo</item>
     </array>
 
     <string-array name="drawer_main_menus">
-        <item>Tabel data</item>
-        <item>Grafik data</item>
+        <item>Rekam Data</item>
         <item>Ambil data</item>
-        <item>Cetak laporan</item>
+        <item>Cetak Laporan</item>
     </string-array>
 
     <array name="drawer_main_icons">
-        <item>@drawable/ic_chrome_reader_mode_black_24dp</item>
-        <item>@drawable/ic_show_chart_black_24dp</item>
+        <item>@drawable/ic_timeline_black_24dp</item>
         <item>@drawable/ic_get_app_black_24dp</item>
         <item>@drawable/ic_print_black_24dp</item>
     </array>
 
     <string-array name="drawer_setting_menus">
-        <item>Pengaturan</item>
-        <item>Tentang kami</item>
+        <!--<item>Pengaturan</item>-->
+        <item>Tentang Aplikasi</item>
         <item>Keluar</item>
     </string-array>
 
     <array name="drawer_setting_icons">
-        <item>@drawable/ic_settings_black_24dp</item>
+        <!--<item>@drawable/ic_settings_black_24dp</item>-->
         <item>@drawable/ic_info_outline_black_24dp</item>
         <item>@drawable/ic_exit_to_app_black_24dp</item>
     </array>

@@ -10,18 +10,42 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
+
             <Button
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableRight="@drawable/ic_bluetooth_disabled_black_24dp"
-                style="@style/Widget.AppCompat.Button.Borderless"/>
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:drawableTop="@drawable/ic_chrome_reader_mode_black_24dp"
+                android:text="Rekam Data"
+                android:id="@+id/btn_rekam_data"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:drawableTop="@drawable/ic_get_app_black_24dp"
+                android:text="Ambil Data"
+                android:id="@+id/btn_ambil_data"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -29,21 +53,28 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
+
             <Button
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableRight="@drawable/ic_bluetooth_disabled_black_24dp"
-                style="@style/Widget.AppCompat.Button.Borderless"/>
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:drawableTop="@drawable/ic_print_black_24dp"
+                android:text="Cetak Laporan"
+                android:id="@+id/btn_cetak_laporan"/>
+
             <Button
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:drawableRight="@drawable/ic_bluetooth_disabled_black_24dp"
-                style="@style/Widget.AppCompat.Button.Borderless"/>
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:drawableTop="@drawable/ic_info_outline_black_24dp"
+                android:text="Tentang Aplikasi"
+                android:id="@+id/btn_tentang_app"/>
+
         </LinearLayout>
     </LinearLayout>
-
-
 
 </FrameLayout>

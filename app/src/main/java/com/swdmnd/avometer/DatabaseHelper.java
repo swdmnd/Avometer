@@ -22,10 +22,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 5;
 
     // Database Name
-    private static final String DATABASE_NAME = "sofc";
+    private static final String DATABASE_NAME = "avometer";
 
     // Table Names
-    private static final String TABLE_NAME = "sofc_table";
+    private static final String TABLE_NAME = "avometer_table";
 
     // Column names
     private static final String COL_ID = "id";
@@ -37,7 +37,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_RESISTANCE = "resistansi";
 
     // Table Create Statements
-    private static final String CREATE_TABLE_SOFC =
+    private static final String CREATE_TABLE_AVOMETER =
             "CREATE TABLE " + TABLE_NAME +
                     "(" +
                     COL_ID + " INTEGER PRIMARY KEY, " +
@@ -56,7 +56,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(CREATE_TABLE_SOFC);
+        sqLiteDatabase.execSQL(CREATE_TABLE_AVOMETER);
     }
 
     @Override

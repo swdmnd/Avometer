@@ -115,9 +115,9 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
         mDrawerHomeMenuImages = assignIconsIds(getResources().obtainTypedArray(R.array.drawer_home_icons));
 
         // Set the adapter for the list view
-        mDrawerList.setAdapter(new DrawerListAdapter(this, mDrawerMainMenus, mDrawerImages));
-        mDrawerSettingMenuList.setAdapter(new DrawerListAdapter(this, mDrawerSettingMenus, mDrawerSettingMenuImages));
-        mDrawerHomeMenuList.setAdapter(new DrawerListAdapter(this, mDrawerHomeMenus, mDrawerHomeMenuImages));
+        mDrawerList.setAdapter(new DrawerListAdapter(this, mDrawerMainMenus, mDrawerImages, Constants.DRAWER_POSITION_MAIN_MENU));
+        mDrawerSettingMenuList.setAdapter(new DrawerListAdapter(this, mDrawerSettingMenus, mDrawerSettingMenuImages, Constants.DRAWER_POSITION_SETTING_MENU));
+        mDrawerHomeMenuList.setAdapter(new DrawerListAdapter(this, mDrawerHomeMenus, mDrawerHomeMenuImages, Constants.DRAWER_POSITION_HOME_MENU));
 
         // Set the list's click listener
         mDrawerHomeMenuList.setOnItemClickListener(new ListView.OnItemClickListener(){
@@ -195,6 +195,9 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
                        Constants.PERMISSION_COARSE_LOCATION);
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        Constants.PERMISSION_WRITE_EXTERNAL_STORAGE);
 
                 // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
                 // app-defined int constant. The callback method gets the
@@ -215,7 +218,6 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
                     // permission was granted, yay! Do the
                     // contacts-related task you need to do.
 
-                    Toast.makeText(this,"Bluetooth harusnya bisa jalan sekarang...", Toast.LENGTH_SHORT).show();
                 } else {
 
                     // permission denied, boo! Disable the
@@ -225,6 +227,22 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
                 return;
             }
 
+            case Constants.PERMISSION_WRITE_EXTERNAL_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    Toast.makeText(this,"Tolong izinkan Write External Storage jika ingin mencetak hasil pengukuran ke pdf.", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
             // other 'case' lines to check for other
             // permissions this app might request
         }
@@ -263,7 +281,7 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
         switch (drawerCurrentPosition){
             case Constants.DRAWER_POSITION_MAIN_MENU:
                 switch (drawerMainMenuLastPosition){
-                    case 2:
+                    case 1:
                         settingsItem = menu.findItem(R.id.action_bluetooth_search);
                         // set your desired icon here based on a flag if you like
                         settingsItem.setIcon(ContextCompat.getDrawable(this, actionButtonIcon.get(Constants.KEY_BLUETOOTH_ICON)));
@@ -314,14 +332,10 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
                         break;
 
                     case 1:
-                        fragment = new ChartFragment();
-                        break;
-
-                    case 2:
                         fragment = new GetDataFragment();
                         break;
 
-                    case 3:
+                    case 2:
                         fragment = new PrintFragment();
                         break;
                 }
@@ -350,14 +364,16 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
 
             case Constants.DRAWER_POSITION_SETTING_MENU:
                 switch(position){
-                    case 0:
-                        fragment = new SettingsFragment();
-                        break;
+                    //case 0:
+                    //    fragment = new SettingsFragment();
+                    //    break;
 
-                    case 1:
+                    case 0:
+                        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        View view = inflater.inflate(R.layout.about_us, null);
                         new AlertDialog.Builder(parentActivity)
                                 .setTitle(R.string.about_us)
-                                .setMessage(R.string.about_us_desc)
+                                .setView(R.layout.about_us)
                                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
 
@@ -367,7 +383,7 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
                                 .show();
                         break;
 
-                    case 2:
+                    case 1:
                         finish();
                         break;
                 }
@@ -385,21 +401,21 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
                             .commit();
                 }
 
-                if(position<1){
+                /*if(position<1){
                     // Highlight the selected item, update the title, and close the drawer
                     mDrawerSettingMenuList.setItemChecked(position, true);
                     setTitle(mDrawerSettingMenus[position]);
                     drawerSettingMenuLastPosition = position;
                     mDrawerList.setItemChecked(drawerMainMenuLastPosition, false);
                     mDrawerHomeMenuList.setItemChecked(drawerHomeMenuLastPosition, false);
-                } else {
+                } else {*/
                     if(drawerLastPosition == Constants.DRAWER_POSITION_SETTING_MENU){
                         mDrawerSettingMenuList.setItemChecked(drawerSettingMenuLastPosition, true);
                     } else {
                         drawerCurrentPosition = drawerLastPosition;
                         mDrawerSettingMenuList.setItemChecked(position, false);
                     }
-                }
+                //}
                 mDrawerLayout.closeDrawer(mDrawer);
                 break;
         }
@@ -414,11 +430,10 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
             case Constants.DRAWER_POSITION_MAIN_MENU:
                 switch (drawerMainMenuLastPosition){
                     case 0:
-                    case 1:
                         getMenuInflater().inflate(R.menu.menu_data_utilities, menu);
                         break;
 
-                    case 2:
+                    case 1:
                         getMenuInflater().inflate(R.menu.menu_get_data, menu);
                         break;
                 }
@@ -453,7 +468,7 @@ public class MainActivity extends AppCompatActivity implements GetDataFragment.G
 
             case R.id.action_get_data:
                 drawerCurrentPosition = Constants.DRAWER_POSITION_MAIN_MENU;
-                selectItem(2);
+                selectItem(1);
                 return true;
 
             case R.id.action_toggle_view:

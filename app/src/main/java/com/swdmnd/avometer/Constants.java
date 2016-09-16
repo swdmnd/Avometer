@@ -4,7 +4,7 @@ import java.util.Locale;
 
 /**
  * Created by Arief on 9/3/2015.
- * A class holding constants that is used or will be used in SOFCApp
+ * A class holding constants that is used or will be used in Avometer
  */
 public class Constants {
     public static final int MESSAGE_READ = 1;
@@ -33,6 +33,7 @@ public class Constants {
 
     public static final int PERMISSION_COARSE_LOCATION = 200;
     public static final int PERMISSION_FINE_LOCATION = 201;
+    public static final int PERMISSION_WRITE_EXTERNAL_STORAGE = 202;
 
     public static final long MINIMUM_REALTIME_INTERVAL = 100;
     public static final byte[] ASK_REALTIME_DATA = "1".getBytes();

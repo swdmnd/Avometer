@@ -359,6 +359,9 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
             tableRowPosition = TABLE_HEADER_ROW;
 
             noDataIndicator.setVisibility(View.VISIBLE);
+            tableLayout.setVisibility(View.GONE);
+            lineChart.setVisibility(View.GONE);
+            radioGroup.setVisibility(View.GONE);
             final AsyncTask<String,Object, Object> mTask = this;
 
             pDialog = new ProgressDialog(getActivity());
@@ -397,7 +400,7 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
             switch(tableRowPosition){
                 case TABLE_HEADER_ROW:
                     String[] headerTexts = {
-                            "Waktu", "Tegangan (V)", "Arus (mA)", "Suhu (C)", "Resistansi"
+                            "Waktu", "Tegangan (V)", "Arus (A)", "Suhu (C)", "Resistansi"
                     };
                     for(String headerText : headerTexts){
                         tableCell = new TextView(getActivity());
@@ -545,7 +548,7 @@ public class TableFragment extends Fragment implements DatePickerFragment.Callba
                         if(chartState == CHART_STATE_VOLTAGE){
                             lineDataSet = new LineDataSet(values, "Tegangan (V)");
                         } else if (chartState == CHART_STATE_CURRENT){
-                            lineDataSet = new LineDataSet(values, "Arus (mA)");
+                            lineDataSet = new LineDataSet(values, "Arus (A)");
                         } else if (chartState == CHART_STATE_TEMPERATURE){
                             lineDataSet = new LineDataSet(values, "Suhu (C)");
                         } else if (chartState == CHART_STATE_RESISTANCE){

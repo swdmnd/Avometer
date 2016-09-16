@@ -15,6 +15,7 @@ import android.widget.TextView;
 public class DrawerListAdapter extends ArrayAdapter<String> {
     private final String[] itemName;
     private final int[] imgId;
+    private final int menuGroup;
     private LayoutInflater layoutInflater;
 
     static class ViewHolder{
@@ -22,9 +23,10 @@ public class DrawerListAdapter extends ArrayAdapter<String> {
         ImageView imageView;
     }
 
-    public DrawerListAdapter(Activity context, String[] itemName, int[] imgId) {
+    public DrawerListAdapter(Activity context, String[] itemName, int[] imgId, int menuGroup) {
         super(context, R.layout.drawer_list_item, itemName);
 
+        this.menuGroup = menuGroup;
         this.itemName=itemName;
         this.imgId=imgId;
         layoutInflater = context.getLayoutInflater();
@@ -42,6 +44,8 @@ public class DrawerListAdapter extends ArrayAdapter<String> {
             mViewHolder = (ViewHolder) view.getTag();
         }
 
+        if(menuGroup == Constants.DRAWER_POSITION_HOME_MENU)
+            view.setBackground(getContext().getResources().getDrawable(R.drawable.drawer_background_alternate));
         mViewHolder.titleText.setText(itemName[position]);
         mViewHolder.imageView.setImageResource(imgId[position]);
         return view;

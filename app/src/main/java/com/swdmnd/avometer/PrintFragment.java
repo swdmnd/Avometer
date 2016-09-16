@@ -202,6 +202,17 @@ public class PrintFragment extends Fragment {
 
         @Override
         protected String doInBackground(String... f_url) {
+            DatabaseHelper databaseHelper = new DatabaseHelper(getActivity());
+
+            java.util.List<String> dateLists = new ArrayList<>();
+            java.util.List<DataRecord> dailyRecords = new ArrayList<DataRecord>();
+            dateLists = databaseHelper.listDates();
+            if(dateLists == null) {
+                statusMsg = "Tidak ada data yang bisa dilaporkan.";
+                resultStatus = Constants.STATUS_FAILED;
+                return null;
+            }
+
             Date date = new Date() ;
             String timeStamp = new SimpleDateFormat("dd-MM-yyyy_HH:mm").format(date);
 
@@ -215,7 +226,7 @@ public class PrintFragment extends Fragment {
                     PdfWriter.getInstance(document, output);
                     document.open();
 
-                    Paragraph title = new Paragraph("Laporan Pengukuran SOFC", new Font(Font.FontFamily.HELVETICA, 18, Font.BOLD));
+                    Paragraph title = new Paragraph("Laporan Pengukuran", new Font(Font.FontFamily.HELVETICA, 18, Font.BOLD));
                     title.setAlignment(Element.ALIGN_CENTER);
                     document.add(title);
 
@@ -225,11 +236,6 @@ public class PrintFragment extends Fragment {
                     title.add(new Paragraph(" "));
                     document.add(title);
 
-                    DatabaseHelper databaseHelper = new DatabaseHelper(getActivity());
-
-                    java.util.List<String> dateLists = new ArrayList<>();
-                    java.util.List<DataRecord> dailyRecords = new ArrayList<DataRecord>();
-                    dateLists = databaseHelper.listDates();
                     for (String logDate : dateLists) {
                         String mYear = logDate.substring(0, 4);
                         String mMonth = new DateFormatSymbols(new Locale("id")).getMonths()[Integer.parseInt(logDate.substring(5, 7))-1];
@@ -254,7 +260,7 @@ public class PrintFragment extends Fragment {
                         PdfPCell cell;
                         tableDatas[0] = "Waktu";
                         tableDatas[1] = "Tegangan (V)";
-                        tableDatas[2] = "Arus (mA)";
+                        tableDatas[2] = "Arus (A)";
                         tableDatas[3] = "Suhu (C)";
                         tableDatas[4] = "Resistansi";
 
