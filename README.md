@@ -1,4 +1,4 @@
 # Avometer
-### Metering utilities for Android?
+### Acquiring data from Arduino
 
-An Android application for acquiring data from Solid Oxide Fuel Cell measuring instrument.
+An Android application for acquiring data from Arduino-based measuring instrument.
