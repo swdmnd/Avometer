@@ -8,14 +8,14 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:layout_alignParentLeft="true"
-        android:id="@+id/image_hotasi"
-        android:src="@drawable/hotasi"
+        android:id="@+id/image_author"
+        android:src="@drawable/logo"
         android:layout_marginLeft="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/image_hotasi"
+        android:layout_toRightOf="@id/image_author"
         android:text="@string/about_us_desc"
         android:layout_marginLeft="8dp"
         android:paddingRight="20dp"/>

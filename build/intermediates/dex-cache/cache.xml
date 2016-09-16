@@ -1,3 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.4.0_5278a19203c739dfbf3ec0e1267896b593f6bf84.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_d8836e16d0632643cdcf3282350735d401bba08c\classes.dex" />
+    </item>
+    <item
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_6c2a284fdd61d0d8ac24aa3991d9cfbc35ef85c7\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\SOFCApp\aFileDialog\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b1fc9a97f234292aa749919fa468fb718f47a928">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\SOFCApp-aFileDialog-unspecified_bc0abd56fb254f2760df8e5d1e337e74804893c8.jar" />
+    </item>
+    <item
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\support-annotations-23.4.0_6c2a284fdd61d0d8ac24aa3991d9cfbc35ef85c7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_5278a19203c739dfbf3ec0e1267896b593f6bf84\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-23.4.0_2f5ee5dae82d41266978acf65e3fc78db0e97098.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_9df7f181471b521a8470bf90ff441da6e1bfe0e7\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\com.android.support-animated-vector-drawable-23.4.0_9df7f181471b521a8470bf90ff441da6e1bfe0e7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_2f5ee5dae82d41266978acf65e3fc78db0e97098\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\libs\itextg-5.5.9.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3580383b2c7db8fa2fee1ffbe1993017a9ea296e">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\2\itextg-5.5.9_da33fa85aa2766a132fd7d778e5f16bb726ef461\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_28de91b2f6e3572076d92ecf970d7cf1ea098d52\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-23.4.0_28de91b2f6e3572076d92ecf970d7cf1ea098d52.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\libs\itextg-5.5.9.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3580383b2c7db8fa2fee1ffbe1993017a9ea296e">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\itextg-5.5.9_da33fa85aa2766a132fd7d778e5f16bb726ef461.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.4.0_e7e3788e3dd4462ce1adf5146019c106057a5068.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_e7e3788e3dd4462ce1adf5146019c106057a5068\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="edbc182e2f5487bb6e7342c7260e7bf8760ee259">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2d3c5896aaf411f5b53de839f096add798102eca\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\libs\mpandroidchartlibrary-2-2-4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5455fb794bfcbeb75da252dffd907794614f7fd">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\mpandroidchartlibrary-2-2-4_d77ec5ca2496d310978e1bcc3dd87480514df447.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\libs\mpandroidchartlibrary-2-2-4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e5455fb794bfcbeb75da252dffd907794614f7fd">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\2\mpandroidchartlibrary-2-2-4_d77ec5ca2496d310978e1bcc3dd87480514df447\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e5b45b3a99001288f763a68a6c39a3b93e234247">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_95c63d926c770007a2b30f1e591e246e07d73e91\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\internal_impl-23.4.0_f400759f41392126fe816705b74320a66df574fa.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_f400759f41392126fe816705b74320a66df574fa\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\Arief\AndroidStudioProjects\SOFCApp\app\build\intermediates\pre-dexed\release\com.android.support-cardview-v7-23.4.0_d8836e16d0632643cdcf3282350735d401bba08c.jar" />
+    </item>
+
+</items>

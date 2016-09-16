@@ -13,7 +13,7 @@
     <string name="choose_device">Pilih perangkat</string>
     <string name="refresh">Refresh</string>
     <string name="about_us">Tentang Aplikasi</string>
-    <string name="about_us_desc">Hot Asi Yohannes Sidabutar\n21060112140039\n\nPerancangan Avometer dan Pengukuran Suhu Berbasis Android</string>
+    <string name="about_us_desc">Deskripsi</string>
     <string name="milliseconds">ms</string>
     <string name="get_realtime_data">Data real time</string>
 
